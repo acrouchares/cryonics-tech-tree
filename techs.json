@@ -1,0 +1,1811 @@
+[
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance"],
+        "percentCompleted": 40,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 2,
+        "prerequisites": "Cryoprotectant Development",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryoprotectant Development",
+        "futureTechDependents": ["DNA Repair Nanobots"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Vitrification",
+        "futureTechDependents": ["Macrovascular and Microvascular Scans", "Cryogenic Rewarming"],
+        "percentCompleted": 35,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryoprotectant Development",
+        "futureTechDependents": "None",
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced Vitrification",
+        "futureTechDependents": ["Cell Membrane Repair"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "DNA Repair Nanobots",
+        "futureTechDependents": ["Medical Nanorobotics"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Perfusion Techniques",
+        "futureTechDependents": "None",
+        "percentCompleted": 25,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["DNA Repair Nanobots", "Cell Membrane Repair"],
+        "futureTechDependents": ["Atomically Precise Manufacturing"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Medical Nanorobotics",
+        "futureTechDependents": ["Mechanosynthesis"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Atomically Precise Manufacturing",
+        "futureTechDependents": ["Nanofactories"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Mechanosynthesis",
+        "futureTechDependents": "None",
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryogenic Storage Improvements",
+        "futureTechDependents": ["Submicron Tissue Scans"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 4,
+        "prerequisites": "Macrovascular and Microvascular Scans",
+        "futureTechDependents": ["Computational Repair Models"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 4,
+        "prerequisites": "Submicron Tissue Scans",
+        "futureTechDependents": "None",
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cryogenic Storage Improvements",
+        "futureTechDependents": "None",
+        "percentCompleted": 25,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Computational Repair Models",
+        "futureTechDependents": ["Complete Organ Regeneration"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Synthetic Biology",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 2,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 5,
+        "prerequisites": ["Complete Organ Regeneration", "Cryogenic Rewarming"],
+        "futureTechDependents": "None",
+        "percentCompleted": 1,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Protein Folding Assistance",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Whole Organ Simulation",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Body System Simulation",
+        "futureTechDependents": "None",
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Molecular Dynamics Simulation",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Macrovascular and Microvascular Scans",
+        "futureTechDependents": ["Submicron Tissue Scans"],
+        "percentCompleted": 30,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Computational Repair Models",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 5,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "DNA Repair Nanobots",
+        "futureTechDependents": ["Synthetic Biology"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Complete Organ Regeneration"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Virtual Tissue Engineering",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Epigenetic Reprogramming",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Regeneration", "Whole Body Revival"],
+        "percentCompleted": 25,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 4,
+        "prerequisites": "Stem Cell Therapies",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Scaffold-free Tissue Engineering",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Gene Editing for Repair", "Predictive Analytics"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Medical Nanorobotics",
+        "futureTechDependents": ["Organ Preservation", "Neuroregeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Body System Simulation",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced Metabolomics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryoprotectant Development",
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Medical Nanorobotics",
+        "futureTechDependents": ["Gene Editing for Repair"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "None",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Epigenetic Reprogramming",
+        "futureTechDependents": ["Neuroregeneration", "Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cryogenic Rewarming",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 5,
+        "prerequisites": "Neuroregeneration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Synthetic Biology"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Synthetic Biology",
+        "futureTechDependents": ["Complete Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Scaffold-free Tissue Engineering",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Biohybrid Implants",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 5,
+        "prerequisites": "Soft Robotics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Whole Body Simulation",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Epigenetic Reprogramming"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 4,
+        "prerequisites": "Molecular Dynamics Simulation",
+        "futureTechDependents": ["Virtual Tissue Engineering"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Bioinformatics Integration"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 5,
+        "prerequisites": "Whole Body Simulation",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Electromechanical Stimulation",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Epigenome Editing"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Whole Organ Simulation",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Synthetic Blood Substitutes",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryoprotectant Development",
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Autonomous Surgical Robots",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Biohybrid Implants",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioartificial Organs",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Revival Procedures",
+        "aiLevelRequired": 5,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-based Personal Health Assistants",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["AI-driven Rehabilitation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced CRISPR Technologies",
+        "futureTechDependents": ["Neuroregeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Adaptive Immune System Simulation",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Regenerative Medicine Algorithms"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cellular Senescence Reversal",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Nanopore Sequencing",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Protein Folding Assistance"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Complete Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cryogenic Storage Improvements",
+        "futureTechDependents": ["Cryogenic Rewarming"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Synthetic Biology"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Regenerative Medicine Algorithms"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Metabolomics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Neuroregeneration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Smart Biomaterials",
+        "futureTechDependents": ["Biohybrid Implants"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Nanomedicine Delivery Systems",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Bioprinting of Tissues"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Biosynthetic Pathways"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["AI-driven Rehabilitation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Nanoparticle Drug Carriers",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Automated Tissue Culture Systems",
+        "futureTechDependents": ["Organoid Cultures"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Nanoparticle-based Imaging",
+        "futureTechDependents": ["Nanomedicine Delivery Systems"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Automated Tissue Culture Systems",
+        "futureTechDependents": ["Bioprinting of Tissues"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Microbiome Restoration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Epigenome Editing"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Epigenetic Reprogramming"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Stem Cell Therapies",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Hydrogel Development",
+        "futureTechDependents": ["Nanomedicine Delivery Systems"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "Nanopore Sequencing",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Medical Nanorobotics",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "None",
+        "futureTechDependents": ["Personalized Revival Protocols"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 3,
+        "prerequisites": "Photothermal Therapy",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Organoid Cultures",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Proteomics",
+        "futureTechDependents": ["Bioinformatics Integration"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Nanopore Sequencing",
+        "futureTechDependents": ["Personalized Cell Therapy"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Nanoparticle Drug Carriers",
+        "futureTechDependents": ["Medical Nanorobotics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Neuroregeneration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Biohybrid Implants",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Smart Drug Delivery Systems",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Metabolomics",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Smart Biomaterials",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-based Personal Health Assistants",
+        "futureTechDependents": ["AI-driven Rehabilitation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Microbiome Engineering",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Regenerative Skin Treatments",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Personalized Revival Protocols"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Scaffold-free Tissue Engineering",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced CRISPR Technologies",
+        "futureTechDependents": ["Gene Editing for Repair"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Metabolomics",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Engineered Immune Cells",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-driven Rehabilitation",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Synthetic Biology"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-guided Microsurgery",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 4,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Photodynamic Therapy",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Nanopore Sequencing",
+        "futureTechDependents": ["Microbiome Engineering"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics for Genomics",
+        "futureTechDependents": ["Personalized Nutrition"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Synthetic Biology",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Regenerative Medicine Algorithms",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["AI-based Personal Health Assistants"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Epigenetic Reprogramming",
+        "futureTechDependents": ["Cellular Senescence Reversal"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-based Diagnostic Genomics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Genetic Circuit Design",
+        "futureTechDependents": ["Synthetic Biology"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Neurointerface Technologies",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "AI-driven Rehabilitation",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 4,
+        "prerequisites": "Engineered Immune Cells",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Nanovaccine Development",
+        "futureTechDependents": ["Immunomodulation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Soft Robotics",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 4,
+        "prerequisites": "Predictive Analytics",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Smart Biomaterials",
+        "futureTechDependents": ["Biohybrid Implants"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Advanced Tissue Scaffolding",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Automated Tissue Culture Systems"],
+        "percentCompleted": 30,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 40,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Cryoprotectant Development"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Nanopore Sequencing"],
+        "percentCompleted": 40,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Gene Editing for Repair"],
+        "percentCompleted": 30,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 2,
+        "prerequisites": "Tissue Biobanking",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Proteomics"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Metabolomics"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 1,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Automated Tissue Culture Systems"],
+        "percentCompleted": 35,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Diagnostic Imaging"],
+        "percentCompleted": 40,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Bioinformatics Integration"],
+        "percentCompleted": 30,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Automated Tissue Culture Systems"],
+        "percentCompleted": 30,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cryopreservation",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 40,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Stem Cell Therapies",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Cell Line Development"],
+        "percentCompleted": 25,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Smart Biomaterials"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Diagnostic Imaging"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Bioprinting of Tissues"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Targeted Immunotherapies"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "AI and Data",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["AI-based Diagnostic Genomics"],
+        "percentCompleted": 25,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Epigenome Editing"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Primary Cell Isolation",
+        "futureTechDependents": ["Stem Cell Therapies"],
+        "percentCompleted": 25,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Advanced Biology",
+        "aiLevelRequired": 2,
+        "prerequisites": "None",
+        "futureTechDependents": ["Genetic Screening of Embryos"],
+        "percentCompleted": 35,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 2,
+        "prerequisites": "In Vitro Fertilization (IVF)",
+        "futureTechDependents": ["Personalized Cell Therapy"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Basic Cell Culture Techniques",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 2,
+        "prerequisites": "Simple Imaging Techniques",
+        "futureTechDependents": ["Optogenetics"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Genetic Sequencing", "Gene Editing"],
+        "percentCompleted": 100,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Diagnostic Imaging"],
+        "percentCompleted": 100,
+        "energyCost": "High",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Diagnostic Imaging"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Cell Viability Assays", "Single-Cell Sequencing"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Protein Folding Assistance", "Targeted Protein Degradation"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced Proteomics"],
+        "percentCompleted": 100,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 0,
+        "prerequisites": "None",
+        "futureTechDependents": ["Basic Genetic Sequencing", "Nanopore Sequencing"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Monitoring",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Microfluidic Systems", "Organ-on-a-chip"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    },
+    {
+        "category": "Cellular Repair",
+        "aiLevelRequired": 1,
+        "prerequisites": "None",
+        "futureTechDependents": ["Advanced CRISPR Technologies", "Gene Editing for Repair"],
+        "percentCompleted": 100,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational"
+    }
+]

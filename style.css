@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+}
+
+.tech-tree-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-node {
+    position: absolute;
+    padding: 10px;
+    background-color: #6fae5c;
+    border: 2px solid #3d7836;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    width: 120px;
+}
+
+.tech-node.researched {
+    background-color: #9c9c9c;
+}
+
+.tech-node.available {
+    background-color: #66cdaa;
+}
+
+.tech-node:not(.researched) {
+    cursor: pointer;
+}
+
+.tech-node:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.connection-line {
+    position: absolute;
+    width: 2px;
+    background-color: #ffffff;
+}
