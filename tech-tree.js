@@ -3,13 +3,17 @@ fetch('techs.json')
     .then(data => {
         const techTreeContainer = document.getElementById('tech-tree');
 
-        data.techs.forEach(tech => {
+        data.forEach((tech, index) => {
             // Create the tech node
             const techNode = document.createElement('div');
-            techNode.className = `tech-node ${tech.status}`;
-            techNode.style.left = `${tech.position.x}px`;
-            techNode.style.top = `${tech.position.y}px`;
-            techNode.innerHTML = `<h3>${tech.name}</h3><p>${tech.turns} Turns</p>`;
+            techNode.className = `tech-node ${tech.status || 'unresearched'}`;
+            techNode.style.left = `${index * 150}px`; // Example for horizontal layout
+            techNode.style.top = `${Math.floor(index / 4) * 150}px`; // Example for grid layout
+            techNode.innerHTML = `
+                <h3>${tech.name}</h3>
+                <p>${tech.category}</p>
+                <p>${tech.percentCompleted}% Completed</p>
+            `;
             
             techNode.addEventListener('click', () => {
                 if (!techNode.classList.contains('researched')) {
@@ -19,15 +23,15 @@ fetch('techs.json')
             
             techTreeContainer.appendChild(techNode);
 
-            // Draw connections
-            if (tech.connections) {
-                tech.connections.forEach(connection => {
-                    const connectedTech = data.techs.find(t => t.id === connection);
-                    if (connectedTech) {
-                        drawConnection(techNode, connectedTech);
-                    }
-                });
-            }
+            // Draw connections (if you implement it later)
+            // if (tech.connections) {
+            //     tech.connections.forEach(connection => {
+            //         const connectedTech = data.find(t => t.name === connection);
+            //         if (connectedTech) {
+            //             drawConnection(techNode, connectedTech);
+            //         }
+            //     });
+            // }
         });
     })
     .catch(error => console.error('Error loading JSON:', error));

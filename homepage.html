@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revival Research Group - Homepage</title>
+
+  <!-- Inline CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #00173d;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to right, #00bcd4, #2196f3);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      background-color: #03a9f4;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #121212;
+      background-color: #67e8f9;
+    }
+
+    .header-graphic {
+      background-color: #00173d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+    }
+
+    .header-graphic img {
+      width: 50%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #000000;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #b3e5fc;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-section {
+      background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #03a9f4;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #0288d1;
+    }
+
+    footer {
+      background-color: #00173d;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      color: #67e8f9;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-graphic img {
+        width: 70%;
+        max-width: 300px;
+      }
+      nav ul {
+        justify-content: center;
+      }
+      nav a {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-graphic img {
+        width: 80%;
+        max-width: 250px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .content-section {
+        padding: 1rem;
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  
+  <!-- Babel (for JSX support) -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Inline React Component -->
+  <script type="text/babel">
+    const RRGWebsite = () => {
+      return (
+        <div className="min-h-screen">
+          <header>
+            <nav>
+              <ul className="flex space-x-4">
+                <li><a href="#home" className="menu-item">Home</a></li>
+                <li><a href="#tech-tree" className="menu-item">Tech Tree</a></li>
+                <li><a href="#contact" className="menu-item">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+          
+          <div className="header-graphic">
+            <img src="images/RRG_Logo.png" alt="RRG Logo" />
+          </div>
+          
+          <main id="home">
+            <section id="about" className="content-section">
+              <h3>Our Mission</h3>
+              <p>We are committed to creating a comprehensive library of data mapping the entire journey to reversing "death". Our focus is on monitoring the evolving list of technologies, companies, and individuals critical to cryostasis revival. </p>
+              <a href="mission.html" className="btn">Discover RRG's Mission</a>
+            </section>
+
+            <section id="tech-tree" className="content-section">
+              <h3>Explore the Tech Tree</h3>
+              <p>The Tech Tree helps us organize our 'meta-research' into structured knowledge. Explore the roadmap of technologies we track, categorized by their contributions toward making cryostasis revival a reality.</p>
+              <a href="tech-tree.html" className="btn">Explore the Tech Tree</a>
+            </section>
+
+            <section id="contact" className="content-section">
+              <h3>Get Involved</h3>
+              <p>Whether you're an expert in AI, cryonics, or simply passionate about pushing the boundaries of human longevity, there's a place for you in our mission. Join our community and help us in our journey towards achieving immortality.</p>
+              <a href="mailto:admin@researchrevivalgroup.org" className="btn">Contact Us</a>
+            </section>
+          </main>
+          
+          <footer>
+            <div className="container mx-auto text-center">
+              <p>For all inquiries or to join our mailing list, email:</p>
+              <p className="text-cyan-300 font-bold">
+                <a href="mailto:admin@researchrevivalgroup.org" style={{ color: '#67e8f9', textDecoration: 'none' }}>
+                  admin@researchrevivalgroup.org
+                </a>
+              </p>
+            </div>
+          </footer>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<RRGWebsite />, document.getElementById('root'));
+
+    // JavaScript to highlight the current section in the menu
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+
+      menuItems.forEach((menuItem) => {
+        const section = document.querySelector(menuItem.getAttribute('href'));
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+          current = menuItem.getAttribute('href');
+        }
+      });
+
+      menuItems.forEach((menuItem) => {
+        menuItem.classList.remove('active');
+        if (menuItem.getAttribute('href') === current) {
+          menuItem.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

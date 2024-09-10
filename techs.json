@@ -1,1811 +1,2125 @@
 [
     {
-        "category": "Cryopreservation",
+        "name": "Cryopreservation",
+        "category": "Cryonics",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance"],
         "percentCompleted": 40,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "The process of cooling and storing cells, tissues, or organs at very low temperatures to maintain viability. Essential for the initial preservation of biological structures in cryonics."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Cryoprotectant Development",
+        "category": "Cryonics",
+        "aiLevelRequired": 2,
+        "prerequisites": "Cryopreservation",
+        "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Development of substances that prevent ice formation during cryopreservation by inhibiting ice crystal growth, crucial for reducing damage to biological structures."
+    },
+    {
+        "name": "Perfusion Techniques",
+        "category": "Cryonics",
         "aiLevelRequired": 2,
         "prerequisites": "Cryoprotectant Development",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to ensure uniform distribution of cryoprotectants throughout the body, critical for successful cryopreservation."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Advanced Vitrification",
+        "category": "Cryonics",
         "aiLevelRequired": 3,
         "prerequisites": "Cryoprotectant Development",
-        "futureTechDependents": ["DNA Repair Nanobots"],
-        "percentCompleted": 20,
+        "futureTechDependents": ["DNA Repair Nanobots", "Cryogenic Storage Improvements"],
+        "percentCompleted": 35,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "A method of cryopreservation where biological tissues are cooled at a rate that prevents ice formation, resulting in a glass-like state. This is critical for preserving organs and bodies without damaging cells."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Cryogenic Storage Improvements",
+        "category": "Cryonics",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Vitrification",
         "futureTechDependents": ["Macrovascular and Microvascular Scans", "Cryogenic Rewarming"],
         "percentCompleted": 35,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advancements in maintaining stable cryogenic temperatures for long-term storage, essential for preserving the integrity of cryopreserved tissues and organs."
     },
     {
+        "name": "Protein Folding Assistance",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Cryoprotectant Development",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Technologies to assist in proper protein folding and prevent misfolding after cryopreservation, crucial for maintaining cellular function post-revival."
     },
     {
+        "name": "DNA Repair Nanobots",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced Vitrification",
         "futureTechDependents": ["Cell Membrane Repair"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Nanobots designed to repair DNA damage at the cellular level, critical for restoring the integrity of genetic material post-cryostasis."
     },
     {
+        "name": "Cell Membrane Repair",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "DNA Repair Nanobots",
         "futureTechDependents": ["Medical Nanorobotics"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Nanotechnology solutions to repair damaged cell membranes, essential for restoring cell viability after cryopreservation."
     },
     {
+        "name": "Organ Preservation",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Perfusion Techniques",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 25,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to preserve entire organs for transplantation or revival, critical for maintaining organ functionality post-cryopreservation."
     },
     {
+        "name": "Medical Nanorobotics",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
-        "prerequisites": ["DNA Repair Nanobots", "Cell Membrane Repair"],
+        "prerequisites": "DNA Repair Nanobots, Cell Membrane Repair",
         "futureTechDependents": ["Atomically Precise Manufacturing"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Development of nanorobots for medical applications, including tissue repair and diagnostics, essential for advanced medical procedures in cryonics."
     },
     {
+        "name": "Atomically Precise Manufacturing",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Medical Nanorobotics",
         "futureTechDependents": ["Mechanosynthesis"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Techniques to manufacture structures and devices at the atomic level, crucial for building the next generation of medical nanorobots and other precision tools."
     },
     {
+        "name": "Mechanosynthesis",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Atomically Precise Manufacturing",
         "futureTechDependents": ["Nanofactories"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Building complex molecular structures using mechanical manipulation at the atomic scale, a necessary precursor to the development of nanofactories."
     },
     {
+        "name": "Nanofactories",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Mechanosynthesis",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Factories capable of producing nanotechnology devices and materials, enabling large-scale production of the tools necessary for advanced medical and cryonics applications."
     },
     {
+        "name": "Macrovascular and Microvascular Scans",
         "category": "Revival Procedures",
         "aiLevelRequired": 3,
         "prerequisites": "Cryogenic Storage Improvements",
         "futureTechDependents": ["Submicron Tissue Scans"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "High-resolution scans to assess and map the vascular system, crucial for understanding the state of tissues post-cryopreservation and planning for revival."
     },
     {
+        "name": "Submicron Tissue Scans",
         "category": "Revival Procedures",
         "aiLevelRequired": 4,
         "prerequisites": "Macrovascular and Microvascular Scans",
         "futureTechDependents": ["Computational Repair Models"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Detailed scans to map out tissue at the submicron level for damage assessment, essential for planning precise repair and revival strategies."
     },
     {
+        "name": "Computational Repair Models",
         "category": "Revival Procedures",
         "aiLevelRequired": 4,
         "prerequisites": "Submicron Tissue Scans",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced computational models to plan and direct tissue and organ repair, enabling more accurate and effective revival procedures."
     },
     {
+        "name": "Cryogenic Rewarming",
         "category": "Revival Procedures",
         "aiLevelRequired": 4,
         "prerequisites": "Cryogenic Storage Improvements",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 25,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Safe methods to rewarm cryopreserved tissues and organs without causing damage, a critical step in the revival process."
     },
     {
+        "name": "Synthetic Biology",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Computational Repair Models",
         "futureTechDependents": ["Complete Organ Regeneration"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Design and construction of new biological parts, devices, and systems for repairing and regenerating tissues, essential for advanced regenerative medicine."
     },
     {
+        "name": "Complete Organ Regeneration",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
-        "prerequisites": "Synthetic Biology",
+        "prerequisites": ["Synthetic Biology"],
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 2,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Ability to regenerate entire organs using synthetic biology and advanced tissue engineering techniques, crucial for restoring full body function post-cryopreservation."
     },
     {
+        "name": "Whole Body Revival",
         "category": "Revival Procedures",
         "aiLevelRequired": 5,
         "prerequisites": ["Complete Organ Regeneration", "Cryogenic Rewarming"],
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 1,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Comprehensive process for reviving an entire body, integrating all previous technologies to restore life and function."
     },
     {
+        "name": "Cellular Simulation",
         "category": "Simulation",
         "aiLevelRequired": 3,
         "prerequisites": "Protein Folding Assistance",
         "futureTechDependents": ["Whole Organ Simulation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "High-fidelity simulations of cellular processes to test and validate repair techniques, crucial for planning effective revival strategies."
     },
     {
+        "name": "Whole Organ Simulation",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Cellular Simulation",
         "futureTechDependents": ["Body System Simulation"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Simulating the entire organ's function to understand and predict outcomes of repair techniques, aiding in the planning of revival procedures."
     },
     {
+        "name": "Body System Simulation",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Whole Organ Simulation",
         "futureTechDependents": ["Whole Body Simulation"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Integrated simulation of body systems to test revival procedures and predict their success, crucial for ensuring coordinated body function after revival."
     },
     {
+        "name": "Whole Body Simulation",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Body System Simulation",
-        "futureTechDependents": "None",
+        "futureTechDependents": ["None"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Comprehensive simulation of the entire body to validate the complete revival process, ensuring all systems can be successfully restarted and function in unison."
     },
     {
+        "name": "Molecular Dynamics Simulation",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Cellular Simulation",
         "futureTechDependents": ["Body System Simulation"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Detailed simulation of molecular interactions to understand and optimize biological processes, critical for refining repair techniques at the molecular level."
     },
     {
+        "name": "Virtual Tissue Engineering",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Molecular Dynamics Simulation",
         "futureTechDependents": ["Whole Organ Simulation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Creating virtual models of tissues to test engineering techniques before physical implementation, aiding in the development of more effective tissue regeneration strategies."
     },
     {
+        "name": "Advanced Diagnostic Imaging",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Macrovascular and Microvascular Scans",
         "futureTechDependents": ["Submicron Tissue Scans"],
         "percentCompleted": 30,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "High-resolution imaging techniques for detailed diagnostic information, essential for assessing tissue and organ conditions in cryonics and revival procedures."
     },
     {
+        "name": "Real-time Health Monitoring",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Continuous monitoring of vital signs and health metrics during revival, ensuring immediate responses to any issues that arise during the process."
     },
     {
+        "name": "Predictive Analytics",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Computational Repair Models",
         "futureTechDependents": ["Whole Body Simulation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to predict health outcomes and optimize revival procedures, improving the chances of successful recovery by tailoring approaches to individual cases."
     },
     {
+        "name": "Artificial Intelligence Integration",
         "category": "AI and Data",
         "aiLevelRequired": 5,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Integrating AI into all aspects of the revival process for decision making and optimization, essential for managing the complex interplay of factors during revival."
     },
     {
+        "name": "Gene Editing for Repair",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "DNA Repair Nanobots",
         "futureTechDependents": ["Synthetic Biology"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Precision gene editing techniques to repair genetic damage and defects, crucial for restoring cellular function and preventing genetic disorders after revival."
     },
     {
+        "name": "Epigenetic Reprogramming",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to reset the epigenetic clock and rejuvenate cells, important for reversing aging-related changes and restoring youthful function to cells and tissues."
     },
     {
+        "name": "Bioprinting of Tissues",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Cellular Simulation",
         "futureTechDependents": ["Complete Organ Regeneration"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced 3D bioprinting methods for creating functional tissue structures, essential for regenerating damaged tissues and organs for revival procedures."
     },
     {
+        "name": "Scaffold-free Tissue Engineering",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Virtual Tissue Engineering",
         "futureTechDependents": ["Whole Organ Simulation"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing tissues without scaffolds, using self-assembly and cellular organization techniques, crucial for creating more natural and functional tissue constructs."
     },
     {
+        "name": "Microbiome Restoration",
         "category": "Revival Procedures",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to restore and balance the body's microbiome after revival, important for overall health and preventing infections post-revival."
     },
     {
+        "name": "Neuroregeneration",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Epigenetic Reprogramming",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Methods to regenerate and repair neural tissues and networks, crucial for restoring brain function and overall neurological health after revival."
     },
     {
+        "name": "Stem Cell Therapies",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Regeneration", "Whole Body Revival"],
         "percentCompleted": 25,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced stem cell treatments for regenerating damaged tissues and organs, playing a vital role in recovery after cryostasis."
     },
     {
+        "name": "Immunomodulation",
         "category": "Revival Procedures",
         "aiLevelRequired": 4,
         "prerequisites": "Stem Cell Therapies",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to modulate the immune system to prevent rejection and aid in tissue integration, essential for ensuring compatibility of regenerated tissues and organs."
     },
     {
+        "name": "Quantum Dot Diagnostics",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Real-time Health Monitoring"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using quantum dots for highly sensitive and specific diagnostic imaging, enabling better detection of cellular and molecular changes during and after revival."
     },
     {
+        "name": "In-situ Tissue Regeneration",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Scaffold-free Tissue Engineering",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Techniques for regenerating tissues directly within the body without the need for external constructs, crucial for efficient and natural tissue restoration."
     },
     {
+        "name": "Nanopore Sequencing",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Gene Editing for Repair", "Predictive Analytics"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Real-time DNA sequencing for accurate and rapid genetic diagnostics, essential for personalized medicine and tailoring revival protocols to individual genetic profiles."
     },
     {
+        "name": "Bioinformatics Integration",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Whole Body Simulation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using bioinformatics tools to integrate and analyze biological data for personalized medicine, critical for developing and refining revival techniques."
     },
     {
+        "name": "Soft Robotics",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Medical Nanorobotics",
         "futureTechDependents": ["Organ Preservation", "Neuroregeneration"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Utilizing soft robotics for delicate tissue manipulation and repair, essential for minimally invasive procedures and reducing damage during revival processes."
     },
     {
+        "name": "Adaptive Immune System Simulation",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Body System Simulation",
         "futureTechDependents": ["Whole Body Simulation"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Simulating the adaptive immune response to predict and optimize immunomodulation strategies, essential for ensuring immune compatibility in regenerated tissues."
     },
     {
+        "name": "Advanced Metabolomics",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "High-throughput analysis of metabolites to understand cellular states and responses, critical for monitoring and optimizing metabolic health during and after revival."
     },
     {
+        "name": "Precision Pharmacotherapy",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced Metabolomics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Custom-tailored drug treatments based on individual genetic and metabolic profiles, crucial for addressing specific health challenges during the revival process."
     },
     {
+        "name": "Biohybrid Implants",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Bioprinting of Tissues",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Combining biological tissues with synthetic materials for improved organ and tissue function, essential for replacing or repairing damaged tissues during revival."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Cryoprotectant Toxicity Reduction",
+        "category": "Cryonics",
         "aiLevelRequired": 3,
         "prerequisites": "Cryoprotectant Development",
         "futureTechDependents": ["Advanced Vitrification"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "New methods to reduce toxicity and side effects of cryoprotectants, improving the safety and efficacy of the cryopreservation process."
     },
     {
+        "name": "Nanomedicine Delivery Systems",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Medical Nanorobotics",
         "futureTechDependents": ["Gene Editing for Repair"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Precision delivery of nanomedicine to targeted cells and tissues, crucial for effectively treating specific areas without affecting surrounding healthy tissues."
     },
     {
+        "name": "Regenerative Medicine Algorithms",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Bioinformatics Integration",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "AI-driven algorithms to optimize regenerative medicine protocols, essential for refining the steps necessary for successful revival and tissue regeneration."
     },
     {
+        "name": "Synthetic Blood Substitutes",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "None",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Development of synthetic blood to support circulation during revival procedures, crucial for maintaining oxygenation and nutrient delivery to tissues."
     },
     {
+        "name": "Cellular Senescence Reversal",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Epigenetic Reprogramming",
         "futureTechDependents": ["Neuroregeneration", "Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to reverse cellular aging and restore youthful function, critical for rejuvenating tissues and extending the lifespan of cells post-revival."
     },
     {
+        "name": "Tissue Oxygenation Enhancements",
         "category": "Revival Procedures",
         "aiLevelRequired": 4,
         "prerequisites": "Cryogenic Rewarming",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced methods to improve oxygen delivery to tissues during and after revival, essential for preventing hypoxia and ensuring tissue viability."
     },
     {
+        "name": "Neurointerface Technologies",
         "category": "Cellular Repair",
         "aiLevelRequired": 5,
         "prerequisites": "Neuroregeneration",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Interfaces to connect and repair neural tissues and restore function, crucial for re-establishing communication between the brain and body post-revival."
     },
     {
+        "name": "Microfluidic Systems",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Real-time Health Monitoring"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Lab-on-a-chip devices for high-throughput biological testing and diagnostics, enabling precise control and manipulation of small fluid volumes in medical diagnostics."
     },
     {
+        "name": "Epitranscriptomics",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Synthetic Biology"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Study and manipulation of RNA modifications to control gene expression and repair, crucial for understanding and correcting post-transcriptional errors in cells."
     },
     {
+        "name": "Wearable Health Sensors",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Real-time Health Monitoring",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Continuous health monitoring through advanced wearable devices, essential for tracking physiological parameters during and after revival."
     },
     {
+        "name": "Directed Evolution",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Synthetic Biology",
         "futureTechDependents": ["Complete Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Engineering biological molecules and systems through iterative selection processes, crucial for developing highly optimized enzymes, proteins, and other biomolecules."
     },
     {
+        "name": "Xenotransplantation",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 5,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using genetically modified animal organs for human transplantation, providing a potential source of organs when human donors are unavailable."
     },
     {
+        "name": "Organoid Cultures",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Bioprinting of Tissues",
         "futureTechDependents": ["Whole Organ Simulation"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Miniature, simplified versions of organs grown in vitro for testing and research, providing valuable insights into organ development and function."
     },
     {
+        "name": "Electromechanical Stimulation",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Scaffold-free Tissue Engineering",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using electrical and mechanical signals to guide tissue growth and repair, essential for promoting the proper development and function of regenerated tissues."
     },
     {
+        "name": "In Vivo Imaging",
         "category": "Monitoring",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Whole Body Simulation"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced imaging techniques for real-time monitoring of tissues within the body, crucial for assessing the progress of revival and guiding interventions."
     },
     {
+        "name": "Bioartificial Organs",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Biohybrid Implants",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Combining biological and synthetic components to create fully functional organs, essential for replacing damaged organs and restoring full body function."
     },
     {
+        "name": "Autonomous Surgical Robots",
         "category": "AI and Data",
         "aiLevelRequired": 5,
         "prerequisites": "Soft Robotics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "AI-driven robots capable of performing complex surgeries with minimal human intervention, crucial for precise and efficient surgical procedures during revival."
     },
     {
+        "name": "Digital Twin Modeling",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Whole Body Simulation",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Creating digital replicas of biological systems for predictive testing and analysis, providing a powerful tool for optimizing revival procedures and therapies."
     },
     {
+        "name": "AI-based Drug Discovery",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to discover and optimize new drugs for various treatments, accelerating the development of therapeutics for use in cryonics and revival."
     },
     {
+        "name": "Epigenome Editing",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Epigenetic Reprogramming"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Precision editing of the epigenome to alter gene expression patterns, essential for regulating cellular behavior and ensuring proper function post-revival."
     },
     {
+        "name": "Cell Atlas Construction",
         "category": "Monitoring",
         "aiLevelRequired": 4,
         "prerequisites": "Molecular Dynamics Simulation",
         "futureTechDependents": ["Virtual Tissue Engineering"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Comprehensive mapping of all cell types and their states in the human body, providing essential data for understanding tissue organization and function."
     },
     {
+        "name": "AI-based Personal Health Assistants",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Wearable Health Sensors",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "AI systems that provide personalized health guidance and monitoring, crucial for optimizing health during the recovery phase post-revival."
     },
     {
+        "name": "Advanced Proteomics",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Bioinformatics Integration"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "High-throughput analysis of proteins to understand cellular functions and states, critical for identifying key biomarkers and guiding treatment decisions."
     },
     {
+        "name": "Real-time Biofeedback Systems",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Real-time Health Monitoring",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Systems that provide immediate feedback on physiological changes during revival, allowing for real-time adjustments to optimize recovery outcomes."
     },
     {
+        "name": "Quantum Computing for Simulations",
         "category": "Simulation",
         "aiLevelRequired": 5,
         "prerequisites": "Whole Body Simulation",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Utilizing quantum computing to enhance the accuracy and speed of biological simulations, providing unprecedented computational power for complex models."
     },
     {
+        "name": "Advanced Tissue Scaffolding",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Bioprinting of Tissues",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Creating complex tissue scaffolds for organ and tissue regeneration, essential for supporting the growth and organization of cells in regenerative medicine."
     },
     {
+        "name": "Photothermal Therapy",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using light and heat to treat and repair damaged tissues, providing a non-invasive method for addressing localized injuries and promoting healing."
     },
     {
+        "name": "Bioelectric Signal Modulation",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Electromechanical Stimulation",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Manipulating bioelectric signals to control cellular behavior and tissue regeneration, essential for guiding the development and integration of regenerated tissues."
     },
     {
+        "name": "Advanced CRISPR Technologies",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Epigenome Editing"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Enhancements to CRISPR for more precise and efficient gene editing, enabling targeted interventions to correct genetic defects and enhance cellular function."
     },
     {
+        "name": "Integrated Organ Systems",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Whole Organ Simulation",
         "futureTechDependents": ["Body System Simulation"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Developing integrated systems that mimic the interaction of multiple organs for testing, providing a comprehensive view of how systems will function together post-revival."
     },
     {
+        "name": "Wearable Artificial Organs",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Synthetic Blood Substitutes",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Portable devices that temporarily replace the function of failing organs during recovery, providing life-support options while permanent solutions are prepared."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Cryoprotectant Delivery Systems",
+        "category": "Cryonics",
         "aiLevelRequired": 3,
         "prerequisites": "Cryoprotectant Development",
         "futureTechDependents": ["Advanced Vitrification"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced systems for delivering cryoprotectants uniformly throughout the body, ensuring effective preservation with minimal damage to tissues."
     },
     {
+        "name": "Hypoxia-Resistant Cells",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Engineering cells to withstand low oxygen levels during revival, essential for maintaining cell viability during and after cryogenic rewarming."
     },
     {
+        "name": "AI-guided Microsurgery",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Autonomous Surgical Robots",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "AI systems that assist in performing highly precise surgical procedures, crucial for addressing delicate or complex repairs during revival."
     },
     {
+        "name": "Biodegradable Implants",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Biohybrid Implants",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Implants that safely dissolve in the body after serving their purpose, reducing the need for removal surgeries and minimizing long-term risks."
     },
     {
+        "name": "Smart Biomaterials",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Bioartificial Organs",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Materials that respond to environmental changes to aid in tissue repair and regeneration, essential for creating more adaptive and effective implants."
     },
     {
+        "name": "Personalized Revival Protocols",
         "category": "Revival Procedures",
         "aiLevelRequired": 5,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Custom revival procedures tailored to individual physiological and genetic profiles, improving the chances of successful revival by addressing specific needs."
     },
     {
+        "name": "AI-driven Rehabilitation",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-based Personal Health Assistants",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "AI systems that develop personalized rehabilitation plans post-revival, ensuring that patients regain full functionality as quickly and effectively as possible."
     },
     {
+        "name": "Virtual Reality for Therapy",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["AI-driven Rehabilitation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using VR to aid in mental and physical rehabilitation post-revival, providing immersive environments that enhance recovery and reintegration."
     },
     {
+        "name": "Optogenetics",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced CRISPR Technologies",
         "futureTechDependents": ["Neuroregeneration"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Controlling cells and genes with light to understand and manipulate biological systems, offering precise control over cellular functions and gene expression."
     },
     {
+        "name": "AI-based Immune Profiling",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Adaptive Immune System Simulation",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using AI to analyze and understand an individual's immune system for better treatment, essential for predicting and preventing adverse immune responses during revival."
     },
     {
+        "name": "Regenerative Medicine Databases",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "Bioinformatics Integration",
         "futureTechDependents": ["Regenerative Medicine Algorithms"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Comprehensive databases of regenerative techniques and outcomes to guide treatments, providing critical information for optimizing revival and tissue repair."
     },
     {
+        "name": "Cellular Senescence Inhibitors",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Cellular Senescence Reversal",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Drugs that inhibit the aging of cells and promote longevity, crucial for extending the health span of tissues and preventing age-related decline post-revival."
     },
     {
+        "name": "AI-based Diagnostic Genomics",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Nanopore Sequencing",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "AI systems for analyzing genomic data to diagnose diseases and conditions, providing rapid and accurate assessments for guiding personalized treatment plans."
     },
     {
+        "name": "Targeted Protein Degradation",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Protein Folding Assistance"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to selectively degrade and remove malfunctioning proteins, essential for preventing cellular dysfunction and promoting healthy cell function."
     },
     {
+        "name": "Advanced Organ Printing",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Bioprinting of Tissues",
         "futureTechDependents": ["Complete Organ Regeneration"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Techniques for printing entire functional organs, crucial for replacing damaged or failing organs and restoring full body function."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Hypothermia-induced Preservation",
+        "category": "Cryonics",
         "aiLevelRequired": 3,
         "prerequisites": "Cryogenic Storage Improvements",
         "futureTechDependents": ["Cryogenic Rewarming"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Methods to induce and maintain hypothermia for preservation purposes, extending the time window for successful revival and reducing the risk of damage."
     },
     {
+        "name": "Biosynthetic Pathways",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Synthetic Biology"],
         "percentCompleted": 20,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Engineering biosynthetic pathways for efficient production of essential molecules, essential for creating the building blocks needed for tissue regeneration and repair."
     },
     {
+        "name": "Metabolic Pathway Optimization",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Bioinformatics Integration",
         "futureTechDependents": ["Regenerative Medicine Algorithms"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to optimize metabolic pathways for improved cellular function and longevity, essential for maintaining metabolic health during and after revival."
     },
     {
+        "name": "Personalized Nutrition",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Metabolomics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Tailoring nutritional plans based on individual metabolic and genetic profiles, crucial for supporting recovery and long-term health after revival."
     },
     {
+        "name": "Environmental Control Systems",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced systems to maintain optimal environmental conditions for tissue regeneration, essential for ensuring the success of complex regenerative procedures."
     },
     {
+        "name": "Neuroprosthetics",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Neuroregeneration",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced prosthetics interfaced with neural systems for enhanced control and functionality, crucial for restoring mobility and function in patients with neural damage."
     },
     {
+        "name": "Biomimetic Materials",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Smart Biomaterials",
         "futureTechDependents": ["Biohybrid Implants"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Materials that mimic natural biological properties for use in medical applications, essential for creating more effective and biocompatible implants and devices."
     },
     {
+        "name": "Nanoparticle Drug Carriers",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Nanomedicine Delivery Systems",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Nanoparticles designed to carry and deliver drugs directly to target cells, enhancing the efficacy of treatments and reducing side effects."
     },
     {
+        "name": "Regenerative Skin Treatments",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Advanced treatments for regenerating and repairing skin tissue, crucial for restoring the skin's barrier function and appearance after damage."
     },
     {
+        "name": "Automated Tissue Culture Systems",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Bioprinting of Tissues"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Systems that automate the growth and maintenance of tissue cultures, enabling more efficient and consistent production of cells and tissues for research and therapy."
     },
     {
+        "name": "Biocatalysis",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Biosynthetic Pathways"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using natural catalysts, such as protein enzymes, to perform chemical transformations on organic compounds, essential for metabolic engineering and synthetic biology."
     },
     {
+        "name": "Wearable Biofeedback Devices",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Wearable Health Sensors",
         "futureTechDependents": ["AI-driven Rehabilitation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Wearable devices that provide biofeedback to aid in physical rehabilitation, helping patients recover more effectively by providing real-time data on their progress."
     },
     {
+        "name": "Smart Drug Delivery Systems",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Nanoparticle Drug Carriers",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Systems that deliver drugs in response to specific physiological conditions, ensuring that treatments are administered at the right time and place for maximum effectiveness."
     },
     {
+        "name": "3D Cell Culture",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Automated Tissue Culture Systems",
         "futureTechDependents": ["Organoid Cultures"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques for growing cells in three-dimensional environments to better mimic natural tissue, providing more accurate models for research and therapy development."
     },
     {
+        "name": "Magnetically Guided Nanoparticles",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Nanoparticle-based Imaging",
         "futureTechDependents": ["Nanomedicine Delivery Systems"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using magnetic fields to guide nanoparticles to specific locations within the body, enhancing the precision of drug delivery and other medical interventions."
     },
     {
+        "name": "Ultrasound-based Therapies",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using ultrasound waves to treat and repair tissues, offering a non-invasive option for addressing various medical conditions and promoting healing."
     },
     {
+        "name": "Dynamic Culture Systems",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Automated Tissue Culture Systems",
         "futureTechDependents": ["Bioprinting of Tissues"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Culture systems that dynamically change conditions to better simulate the in vivo environment, crucial for producing more realistic and functional tissues."
     },
     {
+        "name": "Microbiome Engineering",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Microbiome Restoration",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to engineer and manipulate the microbiome for improved health outcomes, essential for maintaining and restoring gut health after revival."
     },
     {
+        "name": "Electroporation-based Gene Delivery",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Epigenome Editing"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using electric pulses to introduce DNA into cells, a key method for gene therapy and other genetic interventions."
     },
     {
+        "name": "Engineered Immune Cells",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Designing immune cells to target and destroy specific pathogens or damaged cells, critical for preventing infections and addressing immune-related challenges during revival."
     },
     {
+        "name": "Remote Patient Monitoring",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Real-time Health Monitoring",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using technology to monitor patients' health status from a distance, providing continuous oversight and enabling timely interventions when necessary."
     },
     {
+        "name": "MicroRNA Therapeutics",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Epigenetic Reprogramming"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using microRNAs to regulate gene expression for therapeutic purposes, offering a powerful tool for controlling cellular behavior and treating diseases."
     },
     {
+        "name": "Regenerative Endodontics",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Stem Cell Therapies",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to regenerate dental tissues and teeth, essential for restoring oral health and function after damage or decay."
     },
     {
+        "name": "Hydrogel-based Drug Delivery",
         "category": "Nanotechnology",
         "aiLevelRequired": 3,
         "prerequisites": "Hydrogel Development",
         "futureTechDependents": ["Nanomedicine Delivery Systems"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using hydrogels as carriers for drug delivery, providing a controlled and sustained release of therapeutic agents to targeted areas."
     },
     {
+        "name": "Bioinformatics for Genomics",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "Nanopore Sequencing",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using bioinformatics to analyze and interpret genomic data, essential for understanding genetic information and guiding personalized medicine."
     },
     {
+        "name": "Nanovaccine Development",
         "category": "Nanotechnology",
         "aiLevelRequired": 4,
         "prerequisites": "Medical Nanorobotics",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing vaccines using nanotechnology to enhance immune response, crucial for creating more effective and targeted immunizations."
     },
     {
+        "name": "AI-based Telemedicine",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "None",
         "futureTechDependents": ["Personalized Revival Protocols"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using AI to provide remote medical consultations and diagnostics, essential for delivering healthcare services in remote or underserved areas."
     },
     {
+        "name": "Photodynamic Therapy",
         "category": "Cellular Repair",
         "aiLevelRequired": 3,
         "prerequisites": "Photothermal Therapy",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using light-sensitive compounds to kill cancer cells and bacteria, providing a targeted approach to treatment with minimal side effects."
     },
     {
+        "name": "AI-based Imaging Analysis",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced Diagnostic Imaging",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using AI to analyze medical images for more accurate diagnostics, improving the speed and accuracy of detecting and diagnosing medical conditions."
     },
     {
+        "name": "Organoid-on-a-chip",
         "category": "Simulation",
         "aiLevelRequired": 4,
         "prerequisites": "Organoid Cultures",
         "futureTechDependents": ["Body System Simulation"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Combining organoid technology with microfluidics to create more accurate models of human physiology, essential for drug testing and disease modeling."
     },
     {
+        "name": "Personalized Cell Therapy",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Customizing cell therapy treatments based on individual patient profiles, crucial for optimizing the effectiveness and safety of regenerative medicine."
     },
     {
+        "name": "AI-driven Clinical Trials",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Bioinformatics Integration",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to design and optimize clinical trials for new treatments, improving the efficiency and accuracy of evaluating therapeutic interventions."
     },
     {
+        "name": "Bioinformatics for Proteomics",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Proteomics",
         "futureTechDependents": ["Bioinformatics Integration"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Analyzing protein data to understand cellular mechanisms and develop new therapies, providing critical insights into protein function and disease."
     },
     {
+        "name": "Single-Cell Sequencing",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Nanopore Sequencing",
         "futureTechDependents": ["Personalized Cell Therapy"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Sequencing the genome of individual cells to understand cellular diversity, essential for identifying rare cell types and understanding disease heterogeneity."
     },
     {
+        "name": "Hemostatic Nanoparticles",
         "category": "Nanotechnology",
         "aiLevelRequired": 3,
         "prerequisites": "Nanoparticle Drug Carriers",
         "futureTechDependents": ["Medical Nanorobotics"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Nanoparticles designed to quickly stop bleeding by promoting blood clotting, providing a rapid and effective solution for traumatic injuries."
     },
     {
+        "name": "Neurogenesis Stimulation",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Neuroregeneration",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to stimulate the growth of new neurons in the brain, essential for restoring cognitive function and repairing neural damage post-revival."
     },
     {
+        "name": "Bio-Integrated Electronics",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Biohybrid Implants",
         "futureTechDependents": ["Real-time Health Monitoring"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Electronic devices integrated with biological tissues for monitoring and control, enabling real-time data collection and feedback for therapeutic interventions."
     },
     {
+        "name": "Transdermal Drug Delivery",
         "category": "Nanotechnology",
         "aiLevelRequired": 3,
         "prerequisites": "Smart Drug Delivery Systems",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Delivery of drugs through the skin using patches or microneedles, offering a non-invasive and convenient method for administering medications."
     },
     {
+        "name": "Metabolite Profiling",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Metabolomics",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Comprehensive analysis of metabolites to understand metabolic changes, crucial for monitoring health and guiding personalized treatments."
     },
     {
+        "name": "Smart Bandages",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Wearable Health Sensors",
         "futureTechDependents": ["Real-time Health Monitoring"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Bandages that monitor wounds and deliver drugs as needed, providing intelligent wound care to promote faster healing and reduce complications."
     },
     {
+        "name": "Bioadhesives",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Smart Biomaterials",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Adhesives designed for medical use to close wounds and surgical incisions, offering a biocompatible and effective solution for tissue repair."
     },
     {
+        "name": "AI-based Mental Health Analysis",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-based Personal Health Assistants",
         "futureTechDependents": ["AI-driven Rehabilitation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to analyze mental health data and provide personalized treatment plans, improving the effectiveness of interventions and support for mental health."
     },
     {
+        "name": "Genetically Engineered Probiotics",
         "category": "Advanced Biology",
         "aiLevelRequired": 3,
         "prerequisites": "Microbiome Engineering",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Probiotics engineered to provide specific health benefits, essential for restoring and maintaining a healthy microbiome post-revival."
     },
     {
+        "name": "Artificial Skin",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Regenerative Skin Treatments",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Development of synthetic skin for grafts and wound healing, providing a vital solution for patients with severe burns or other extensive skin damage."
     },
     {
+        "name": "AI for Early Disease Detection",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Personalized Revival Protocols"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "AI systems that analyze data to detect diseases at an early stage, improving the chances of successful treatment and reducing the burden of disease."
     },
     {
+        "name": "Microgravity Tissue Engineering",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Scaffold-free Tissue Engineering",
         "futureTechDependents": ["Whole Organ Simulation"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using microgravity environments to enhance tissue engineering, providing a unique platform for developing tissues with improved structure and function."
     },
     {
+        "name": "Viral Vector Optimization",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced CRISPR Technologies",
         "futureTechDependents": ["Gene Editing for Repair"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Improving viral vectors for safer and more efficient gene delivery, crucial for enhancing the effectiveness of gene therapy and reducing risks."
     },
     {
+        "name": "Bioinformatics for Metabolomics",
         "category": "AI and Data",
         "aiLevelRequired": 3,
         "prerequisites": "Advanced Metabolomics",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using bioinformatics tools to analyze metabolomic data, providing valuable insights into metabolic processes and guiding personalized treatments."
     },
     {
+        "name": "Targeted Immunotherapies",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Engineered Immune Cells",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing therapies that target specific immune cells to treat diseases, providing a precise and effective approach to managing immune-related conditions."
     },
     {
+        "name": "AI-enhanced Rehabilitation Devices",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-driven Rehabilitation",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to enhance the functionality of rehabilitation devices, providing personalized support and improving outcomes for patients recovering from injuries or surgery."
     },
     {
+        "name": "Genetic Circuit Design",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Synthetic Biology"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Designing genetic circuits for precise control of gene expression, providing a powerful tool for synthetic biology and regenerative medicine."
     },
     {
+        "name": "AI-based Surgical Planning",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-guided Microsurgery",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to plan and optimize surgical procedures, improving the precision and outcomes of complex surgeries during revival."
     },
     {
+        "name": "Integrated Sensor Networks",
         "category": "Monitoring",
         "aiLevelRequired": 4,
         "prerequisites": "Wearable Health Sensors",
         "futureTechDependents": ["Predictive Analytics"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Networks of sensors that provide comprehensive monitoring of health metrics, enabling real-time data collection and analysis for personalized healthcare."
     },
     {
+        "name": "Photopharmacology",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Photodynamic Therapy",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using light to control the activity of drugs within the body, offering a precise and non-invasive method for managing drug effects and reducing side effects."
     },
     {
+        "name": "Metagenomics",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Nanopore Sequencing",
         "futureTechDependents": ["Microbiome Engineering"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Analyzing genetic material recovered directly from environmental samples, providing insights into microbial communities and their roles in health and disease."
     },
     {
+        "name": "AI-based Nutritional Genomics",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Bioinformatics for Genomics",
         "futureTechDependents": ["Personalized Nutrition"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Using AI to analyze genomic data for personalized nutritional advice, helping individuals optimize their diets for health and longevity."
     },
     {
+        "name": "Synthetic Cell Development",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Synthetic Biology",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Creating synthetic cells that mimic natural cell functions, providing a new platform for regenerative medicine and synthetic biology."
     },
     {
+        "name": "AI-enhanced Tissue Regeneration",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Regenerative Medicine Algorithms",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to optimize tissue regeneration processes, providing a more efficient and effective approach to restoring damaged tissues."
     },
     {
+        "name": "Smart Inhalers",
         "category": "Monitoring",
         "aiLevelRequired": 3,
         "prerequisites": "Wearable Health Sensors",
         "futureTechDependents": ["AI-based Personal Health Assistants"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Inhalers that monitor usage and provide feedback for respiratory treatments, helping patients manage their conditions more effectively."
     },
     {
+        "name": "Bioprinting of Vascular Tissues",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Bioprinting of Tissues",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "3D bioprinting techniques for creating blood vessels and vascular networks, essential for supporting the growth and function of larger tissues and organs."
     },
     {
+        "name": "Epigenetic Memory Reprogramming",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Epigenetic Reprogramming",
         "futureTechDependents": ["Cellular Senescence Reversal"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to reset the epigenetic memory of cells for rejuvenation, providing a powerful tool for reversing age-related changes and restoring youthful function."
     },
     {
+        "name": "Autonomous Diagnostic Systems",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-based Diagnostic Genomics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 15,
         "energyCost": "High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Automated systems that perform diagnostics without human intervention, providing rapid and accurate assessments for guiding personalized treatment plans."
     },
     {
+        "name": "Gene Circuit Libraries",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Genetic Circuit Design",
         "futureTechDependents": ["Synthetic Biology"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Libraries of genetic circuits for various therapeutic applications, providing a valuable resource for synthetic biology and regenerative medicine."
     },
     {
+        "name": "AI-augmented Organ Transplants",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to improve the success rates and outcomes of organ transplants, providing more precise and effective solutions for patients with organ failure."
     },
     {
+        "name": "Optoelectronic Interfaces",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Neurointerface Technologies",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "High",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Interfaces that combine optical and electronic signals for neural control, providing a new platform for restoring and enhancing neural function."
     },
     {
+        "name": "AI for Post-Revival Care",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "AI-driven Rehabilitation",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "AI systems to manage and optimize care after revival procedures, providing personalized support for patients as they recover and reintegrate."
     },
     {
+        "name": "Antibody-drug Conjugates",
         "category": "Cellular Repair",
         "aiLevelRequired": 4,
         "prerequisites": "Engineered Immune Cells",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Targeted cancer therapies that deliver drugs directly to cancer cells, providing a precise and effective approach to treatment with minimal side effects."
     },
     {
+        "name": "AI-based Epidemic Prediction",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using AI to predict and track the spread of infectious diseases, providing valuable insights for public health planning and response."
     },
     {
+        "name": "Personalized Vaccines",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Nanovaccine Development",
         "futureTechDependents": ["Immunomodulation"],
         "percentCompleted": 10,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Vaccines tailored to individual genetic and immunological profiles, providing more effective protection and reducing the risk of adverse reactions."
     },
     {
+        "name": "Hybrid Bio-robotic Systems",
         "category": "Advanced Biology",
         "aiLevelRequired": 5,
         "prerequisites": "Soft Robotics",
         "futureTechDependents": ["Whole Body Revival"],
         "percentCompleted": 5,
         "energyCost": "Very High",
-        "strategicFocus": "Key Bottleneck"
+        "strategicFocus": "Key Bottleneck",
+        "description": "Systems that integrate biological tissues with robotic components, providing a new platform for advanced medical devices and therapies."
     },
     {
+        "name": "AI-based Disease Modeling",
         "category": "AI and Data",
         "aiLevelRequired": 4,
         "prerequisites": "Predictive Analytics",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 15,
         "energyCost": "Medium",
-        "strategicFocus": "Simulation/Modeling"
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to create models of diseases for research and treatment development, providing valuable insights into disease mechanisms and potential therapies."
     },
     {
+        "name": "Advanced Biocompatible Materials",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Smart Biomaterials",
         "futureTechDependents": ["Biohybrid Implants"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Materials that are highly compatible with biological systems for implants and devices, providing safer and more effective options for medical applications."
     },
     {
+        "name": "Synthetic Tissue Scaffolds",
         "category": "Advanced Biology",
         "aiLevelRequired": 4,
         "prerequisites": "Advanced Tissue Scaffolding",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 20,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Creating scaffolds from synthetic materials to support tissue engineering, essential for developing functional tissues and organs for regenerative medicine."
     },
     {
+        "name": "Basic Cell Culture Techniques",
         "category": "Cellular Repair",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["Automated Tissue Culture Systems"],
         "percentCompleted": 30,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Fundamental techniques for growing and maintaining cells in culture, providing the basic tools necessary for cellular research and therapy development."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Tissue Biobanking",
+        "category": "Cryonics",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 40,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Storage and management of tissue samples for future research and use, providing a valuable resource for regenerative medicine and revival procedures."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Cryoprotectant Screening",
+        "category": "Cryonics",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Cryoprotectant Development"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Screening of various compounds to identify potential cryoprotectants, essential for developing safer and more effective cryopreservation techniques."
     },
     {
+        "name": "Basic Genetic Sequencing",
         "category": "Monitoring",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Nanopore Sequencing"],
         "percentCompleted": 40,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Sequencing the genetic material of organisms to understand genetic information, providing the foundation for personalized medicine and genetic research."
     },
     {
+        "name": "Cell Line Development",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Gene Editing for Repair"],
         "percentCompleted": 30,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing stable cell lines for research and therapeutic purposes, providing a reliable and consistent source of cells for various applications."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Organ Biobanking",
+        "category": "Cryonics",
         "aiLevelRequired": 2,
         "prerequisites": "Tissue Biobanking",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Storage of organs for future transplantation or research, providing a valuable resource for regenerative medicine and revival procedures."
     },
     {
+        "name": "Basic Proteomics",
         "category": "Monitoring",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Proteomics"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Analyzing proteins to understand their functions and interactions, providing insights into cellular processes and guiding therapeutic development."
     },
     {
+        "name": "Metabolomics Profiling",
         "category": "Monitoring",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Metabolomics"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Analyzing metabolites to understand cellular processes and states, providing critical data for understanding health and disease at the molecular level."
     },
     {
+        "name": "Cell Viability Assays",
         "category": "Cellular Repair",
         "aiLevelRequired": 1,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Automated Tissue Culture Systems"],
         "percentCompleted": 35,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to assess the viability of cells in culture, providing essential data for understanding cell health and guiding experimental design."
     },
     {
+        "name": "Simple Imaging Techniques",
         "category": "Monitoring",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Diagnostic Imaging"],
         "percentCompleted": 40,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Basic imaging methods to observe and analyze cells and tissues, providing a foundation for more advanced diagnostic techniques."
     },
     {
+        "name": "Basic AI for Data Management",
         "category": "AI and Data",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["Bioinformatics Integration"],
         "percentCompleted": 30,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Simple AI algorithms for organizing and managing biological data, providing a foundation for more advanced data analysis and integration."
     },
     {
+        "name": "Drug Screening Assays",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Precision Pharmacotherapy"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Screening potential drugs for therapeutic effects, providing critical data for drug development and personalized medicine."
     },
     {
+        "name": "Serum-free Media Development",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Automated Tissue Culture Systems"],
         "percentCompleted": 30,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing culture media that do not require animal serum, providing a more ethical and controlled environment for cell culture."
     },
     {
-        "category": "Cryopreservation",
+        "name": "Basic Cryopreservation Protocols",
+        "category": "Cryonics",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Vitrification"],
         "percentCompleted": 40,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Standard protocols for freezing and thawing cells and tissues, providing a foundation for more advanced cryopreservation techniques."
     },
     {
+        "name": "Cell Differentiation Techniques",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Stem Cell Therapies",
         "futureTechDependents": ["Organ Regeneration"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Methods to differentiate stem cells into specific cell types, providing a key step in regenerative medicine and tissue engineering."
     },
     {
+        "name": "Primary Cell Isolation",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Cell Line Development"],
         "percentCompleted": 25,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques for isolating primary cells from tissues, providing a critical resource for cellular research and therapy development."
     },
     {
+        "name": "Basic Biomaterials Development",
         "category": "Advanced Biology",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Smart Biomaterials"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing basic biomaterials for use in medical applications, providing a foundation for more advanced biomaterial technologies."
     },
     {
+        "name": "Simple Biosensors",
         "category": "Monitoring",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Advanced Diagnostic Imaging"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Developing basic sensors to monitor biological processes, providing a foundation for more advanced diagnostic and monitoring technologies."
     },
     {
+        "name": "Basic Tissue Engineering",
         "category": "Advanced Biology",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Bioprinting of Tissues"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Fundamental techniques for creating tissues from cells and biomaterials, providing a foundation for more advanced tissue engineering."
     },
     {
+        "name": "Antibody Production",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Targeted Immunotherapies"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Producing antibodies for research and therapeutic use, providing a critical resource for immunotherapy and diagnostic applications."
     },
     {
+        "name": "Simple AI for Pattern Recognition",
         "category": "AI and Data",
         "aiLevelRequired": 1,
         "prerequisites": "None",
         "futureTechDependents": ["AI-based Diagnostic Genomics"],
         "percentCompleted": 25,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Basic AI algorithms for recognizing patterns in biological data, providing a foundation for more advanced data analysis and diagnostics."
     },
     {
+        "name": "Fundamental Gene Editing",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Gene Editing for Repair",
         "futureTechDependents": ["Epigenome Editing"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Basic techniques for editing genes in cells, providing a foundation for more advanced gene editing technologies."
     },
     {
+        "name": "Initial Stem Cell Isolation",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Primary Cell Isolation",
         "futureTechDependents": ["Stem Cell Therapies"],
         "percentCompleted": 25,
         "energyCost": "Low",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Isolating stem cells from tissues for research and therapeutic purposes, providing a critical resource for regenerative medicine."
     },
     {
+        "name": "In Vitro Fertilization (IVF)",
         "category": "Advanced Biology",
         "aiLevelRequired": 2,
         "prerequisites": "None",
         "futureTechDependents": ["Genetic Screening of Embryos"],
         "percentCompleted": 35,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques for fertilizing eggs with sperm outside the body, providing a foundation for genetic screening and reproductive medicine."
     },
     {
+        "name": "Genetic Screening of Embryos",
         "category": "Monitoring",
         "aiLevelRequired": 2,
         "prerequisites": "In Vitro Fertilization (IVF)",
         "futureTechDependents": ["Personalized Cell Therapy"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Screening embryos for genetic disorders before implantation, providing a critical tool for reproductive medicine and personalized healthcare."
     },
     {
+        "name": "Simple Organ Culture",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Basic Cell Culture Techniques",
         "futureTechDependents": ["Organ Preservation"],
         "percentCompleted": 25,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Culturing whole organs in vitro for short-term studies, providing a valuable tool for research and transplantation."
     },
     {
+        "name": "Basic Electrophysiology",
         "category": "Cellular Repair",
         "aiLevelRequired": 2,
         "prerequisites": "Simple Imaging Techniques",
         "futureTechDependents": ["Optogenetics"],
         "percentCompleted": 30,
         "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Genetic Sequencing", "Gene Editing"],
-        "percentCompleted": 100,
-        "energyCost": "Low",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Advanced Diagnostic Imaging"],
-        "percentCompleted": 100,
-        "energyCost": "High",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Advanced Diagnostic Imaging"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 1,
-        "prerequisites": "None",
-        "futureTechDependents": ["Cell Viability Assays", "Single-Cell Sequencing"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Protein Folding Assistance", "Targeted Protein Degradation"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Advanced Proteomics"],
-        "percentCompleted": 100,
-        "energyCost": "Low",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 0,
-        "prerequisites": "None",
-        "futureTechDependents": ["Basic Genetic Sequencing", "Nanopore Sequencing"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Monitoring",
-        "aiLevelRequired": 1,
-        "prerequisites": "None",
-        "futureTechDependents": ["Microfluidic Systems", "Organ-on-a-chip"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
-    },
-    {
-        "category": "Cellular Repair",
-        "aiLevelRequired": 1,
-        "prerequisites": "None",
-        "futureTechDependents": ["Advanced CRISPR Technologies", "Gene Editing for Repair"],
-        "percentCompleted": 100,
-        "energyCost": "Medium",
-        "strategicFocus": "Foundational"
+        "strategicFocus": "Foundational",
+        "description": "Techniques to study the electrical properties of biological cells and tissues, providing a foundation for more advanced research in neurobiology and physiology."
     }
 ]

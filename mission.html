@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revival Research Group - Our Mission</title>
+  
+  <!-- Inline CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #00173d;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to right, #00bcd4, #2196f3);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #121212;
+      background-color: #67e8f9;
+    }
+    .header-graphic {
+      background-color: #00173d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+    }
+    .header-graphic img {
+      width: 50%;
+      max-width: 400px;
+      height: auto;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #000000;
+    }
+    h1, h2 {
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #b3e5fc;
+      margin-bottom: 1.5rem;
+    }
+    .content-section {
+      background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #03a9f4;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #0288d1;
+    }
+    footer {
+      background-color: #00173d;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+    footer a {
+      color: #67e8f9;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-graphic img {
+        width: 70%;
+        max-width: 300px;
+      }
+      nav ul {
+        justify-content: center;
+      }
+      nav a {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-graphic img {
+        width: 80%;
+        max-width: 250px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .content-section {
+        padding: 1rem;
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  
+  <!-- Babel (for JSX support) -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Inline React Component -->
+  <script type="text/babel">
+    const RRGWebsite = () => {
+      return (
+        <div className="min-h-screen">
+          <header>
+            <nav>
+              <ul className="flex space-x-4">
+                <li><a href="homepage.html" className="menu-item">Home</a></li>
+                <li><a href="#our-mission" className="menu-item">Our Mission</a></li>
+                <li><a href="#about" className="menu-item">About Us</a></li>
+                <li><a href="#contact" className="menu-item">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+          
+          <main id="our-mission">
+            <section className="content-section">
+              <h1>Our Mission</h1>
+              <img src="images/vision.jpg" alt="Vision for the future" style={{ width: '100%', borderRadius: '0.5rem', marginBottom: '2rem' }} />
+              <p>At the Revival Research Group, our mission is to create a comprehensive library of data mapping the entire journey to reversing "death". We monitor and track the evolving list of over 200 technologies crucial to cryostasis revival. <strong style={{ color: 'white' }}>We're leveraging AI to organize our 'meta-research' into a 'tech tree', ensuring that we remain on track toward our ultimate goal.</strong></p>
+            </section>
+
+            <section className="content-section">
+              <h2>Research and Innovation</h2>
+              <p>Explore our latest efforts in tracking cutting-edge developments in AI, nanotechnology, and life extension. Stay informed on the progress towards making cryostasis revival a reality.</p>
+            </section>
+
+            <section className="content-section">
+              <h2>Join Our Journey</h2>
+              <p>Whether you're an expert in AI, cryonics, or simply passionate about pushing the boundaries of human longevity, there's a place for you in our mission. <strong style={{ color: 'white' }}>Help us chart the course toward human cryostasis revival.</strong></p>
+              <a href="contact.html" className="btn">Contact Us</a>
+            </section>
+          </main>
+          
+          <footer>
+            <p>For all inquiries or to join our mailing list, email:</p>
+            <p><a href="mailto:admin@researchrevivalgroup.org">admin@researchrevivalgroup.org</a></p>
+            <a href="homepage.html" className="btn">Back to Home</a>
+          </footer>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<RRGWebsite />, document.getElementById('root'));
+  </script>
+</body>
+</html>
