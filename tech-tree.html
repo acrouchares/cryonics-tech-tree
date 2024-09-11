@@ -6,61 +6,225 @@
   <title>Tech Tree - Revival Research Group</title>
 
   <style>
-    /* ... (keep all existing styles) ... */
-
-    /* Update the mobile styles */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        overflow: auto;
-        height: auto;
-      }
-
-      nav {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        overflow-y: visible;
-        border-right: none;
-        border-bottom: 2px solid #67e8f9;
-      }
-
-      main {
-        height: auto;
-        overflow-y: visible;
-      }
-
-      .tech-container {
-        grid-template-columns: repeat(2, 1fr);
-        padding-bottom: 100px;
-      }
-
-      .tech-item {
-        width: auto;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-      }
-
-      .tech-item h3 {
-        font-size: 0.9rem;
-      }
-
-      .tech-item p {
-        font-size: 0.8rem;
-      }
-
-      .gauge-container {
-        width: 30px;
-        height: 30px;
-      }
-
-      .gauge-text {
-        font-size: 0.6rem;
-      }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #00173d;
+      color: #e0e0e0;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
     }
+
+    nav {
+      width: 300px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #000814;
+      padding: 1rem;
+      box-sizing: border-box;
+      border-right: 2px solid #67e8f9;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin-bottom: 1rem;
+    }
+
+    nav li a {
+      color: #67e8f9;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex-grow: 1;
+      overflow-y: auto;
+      background-color: #000000;
+      padding: 1rem;
+    }
+
+    .tech-container {
+      position: relative;
+      padding-bottom: 200px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .tech-item {
+      position: relative;
+      border: 2px solid #67e8f9;
+      border-radius: 5px;
+      padding: 1rem;
+      background-color: #00173d;
+      width: 250px;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    .tech-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .tech-item p {
+      margin: 0.5rem 0;
+    }
+
+    .gauge-container {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .gauge {
+      stroke-dasharray: 100;
+      stroke-width: 8;
+      stroke-linecap: round;
+      fill: none;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .gauge-background {
+      stroke: #10162a;
+    }
+
+    .gauge-progress {
+      stroke: #67e8f9;
+    }
+
+    .gauge-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #b3e5fc;
+    }
+
+    .selected {
+      background-color: #005f99 !important;
+    }
+
+    .greyed-out {
+      opacity: 0.5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #00173d;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #67e8f9;
+      border-radius: 6px;
+      border: 3px solid #00173d;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #00173d;
+      padding: 20px;
+      border: 2px solid #67e8f9;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 600px;
+      color: #e0e0e0;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .close {
+      color: #ffffff;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #f00;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal a {
+      color: #67e8f9;
+      cursor: pointer;
+    }
+
+    .modal a:hover {
+      text-decoration: underline;
+    }
+
+    /* Category-specific text colors */
+    .category-Cryonics {
+      color: #FFCC00; /* Yellow */
+    }
+
+    .category-CellularRepair {
+      color: #00FF00; /* Green */
+    }
+
+    .category-Nanotechnology {
+      color: #FF00FF; /* Magenta */
+    }
+
+    .category-RevivalProcedures {
+      color: #00FFFF; /* Cyan */
+    }
+
+    .category-AIandData {
+      color: #FFA500; /* Orange */
+    }
+
+    .category-AdvancedBiology {
+      color: #FF0000; /* Red */
+    }
+
   </style>
 </head>
 <body>
+
   <nav>
     <ul id="techList">
       <!-- Tech list will be populated dynamically -->
@@ -89,30 +253,200 @@
   </div>
 
   <script>
-    // ... (keep all existing JavaScript) ...
+    let techData = [];
 
-    // Modify the fetch function to include error handling
-    fetch('techs.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+    function createGauge(percent, textColor) {
+      const container = document.createElement('div');
+      container.className = 'gauge-container';
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.classList.add('gauge');
+
+      const background = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      background.classList.add('gauge-background');
+      background.setAttribute('cx', '25');
+      background.setAttribute('cy', '25');
+      background.setAttribute('r', '20');
+      svg.appendChild(background);
+
+      const progress = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      progress.classList.add('gauge-progress');
+      progress.setAttribute('cx', '25');
+      progress.setAttribute('cy', '25');
+      progress.setAttribute('r', '20');
+      progress.setAttribute('stroke-dasharray', '126');
+      progress.setAttribute('stroke-dashoffset', `${126 - (126 * percent / 100)}`);
+      svg.appendChild(progress);
+
+      const text = document.createElement('div');
+      text.classList.add('gauge-text');
+      text.innerText = `${percent}%`;
+      text.style.color = textColor;
+
+      container.appendChild(svg);
+      container.appendChild(text);
+
+      return container;
+    }
+
+    function calculateTextColor(aiLevel) {
+      if (aiLevel === 0) {
+        return '#111111';  // Even darker text for level 0 AI
+      } else if (aiLevel === 1) {
+        return '#222222';  // Darkened text for level 1 AI
+      } else if (aiLevel > 3) {
+        return '#ffffff';  // Light text for higher AI levels
+      } else {
+        return '#000000';  // Dark text for other AI levels
+      }
+    }
+
+    function calculateBackgroundColor(aiLevel) {
+      const colors = ['#e0f7fa', '#b3e5fc', '#4fc3f7', '#0288d1', '#01579b', '#013f6e'];
+      return colors[aiLevel];
+    }
+
+    function openModal(tech) {
+      const modal = document.getElementById("techModal");
+      const title = document.getElementById("techModalTitle");
+      const category = document.getElementById("techModalCategory");
+      const description = document.getElementById("techModalDescription");
+      const aiLevel = document.getElementById("techModalAiLevel");
+      const prerequisites = document.getElementById("techModalPrerequisites");
+      const futureTech = document.getElementById("techModalFutureTech");
+      const energyCost = document.getElementById("techModalEnergyCost");
+      const strategicFocus = document.getElementById("techModalStrategicFocus");
+
+      title.innerText = tech.name;
+      category.innerText = `Category: ${tech.category}`;
+      description.innerText = `Description: ${tech.description}`;
+      aiLevel.innerText = `AI Level Required: ${tech.aiLevelRequired}`;
+
+      if (tech.prerequisites !== "None") {
+        prerequisites.innerHTML = `Prerequisites: ${createTechLinks(tech.prerequisites)}`;
+      } else {
+        prerequisites.innerText = "Prerequisites: None";
+      }
+
+      if (tech.futureTechDependents.length > 0) {
+        futureTech.innerHTML = `Future Tech Dependents: ${createTechLinks(tech.futureTechDependents.join(', '))}`;
+      } else {
+        futureTech.innerText = "Future Tech Dependents: None";
+      }
+
+      energyCost.innerText = `Energy Cost: ${tech.energyCost}`;
+      strategicFocus.innerText = `Strategic Focus: ${tech.strategicFocus}`;
+
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("techModal");
+      modal.style.display = "none";
+    }
+
+    function createTechLinks(techString) {
+      const techArray = techString.split(', ');
+      return techArray.map(techName => `<a href="#" onclick="handleTechLinkClick('${techName}')">${techName}</a>`).join(', ');
+    }
+
+    function handleTechLinkClick(techName) {
+      closeModal();
+      const techBox = document.getElementById(techName.replace(/\s+/g, ''));
+      if (techBox) {
+        techBox.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+        handleSelection(techBox, document.querySelectorAll('.tech-item'));
+        const selectedTech = techData.find(tech => tech.name === techName);
+        if (selectedTech) {
+          setTimeout(() => openModal(selectedTech), 500); 
         }
-        return response.json();
-      })
+      }
+    }
+
+    function handleSelection(selectedBox, allBoxes) {
+      allBoxes.forEach(box => box.classList.remove('selected'));
+      selectedBox.classList.add('selected');
+    }
+
+    function getCategoryClass(category) {
+      return category.replace(/\s+/g, '');
+    }
+
+    fetch('techs.json')
+      .then(response => response.json())
       .then(data => {
         techData = data;
         const techList = document.getElementById('techList');
         const techContainer = document.getElementById('techContainer');
 
-        // ... (keep the rest of the function as is) ...
-      })
-      .catch(error => {
-        console.error('Error loading techs:', error);
-        document.body.innerHTML += `<p style="color: red;">Error loading tech data. Please try refreshing the page. Error details: ${error.message}</p>`;
-      });
+        // Sort the data by aiLevelRequired and then by percentCompleted
+        const sortedByEaseAndCompletion = [...data].sort((a, b) => {
+          if (a.aiLevelRequired !== b.aiLevelRequired) {
+            return a.aiLevelRequired - b.aiLevelRequired;
+          }
+          return b.percentCompleted - a.percentCompleted;
+        });
 
-    // Add this line at the end of the script to check if the script is running
-    console.log('Tech tree script loaded and running');
+        // Populate the tech boxes based on sortedByEaseAndCompletion
+        sortedByEaseAndCompletion.forEach(tech => {
+          const techBox = document.createElement('div');
+          const categoryClass = getCategoryClass(tech.category);
+          techBox.id = tech.name.replace(/\s+/g, '');
+          techBox.className = `tech-item category-${categoryClass}`;
+          techBox.style.backgroundColor = calculateBackgroundColor(tech.aiLevelRequired);
+
+          techBox.innerHTML = `
+            <h3 style="color:${techBox.style.color};" class="category-${categoryClass}">${tech.name}</h3>
+            <p class="category-${categoryClass}">Category: ${tech.category}</p>
+          `;
+
+          const gaugeTextColor = calculateTextColor(tech.aiLevelRequired);
+          const gauge = createGauge(tech.percentCompleted, gaugeTextColor);
+          techBox.appendChild(gauge);
+
+          techBox.addEventListener('click', () => {
+            handleSelection(techBox, document.querySelectorAll('.tech-item'));
+            openModal(tech);
+          });
+
+          techContainer.appendChild(techBox);
+        });
+
+        // Now, sort the techs alphabetically for the left panel list
+        const sortedAlphabetically = [...data].sort((a, b) => a.name.localeCompare(b.name));
+
+        // Populate the left panel list based on alphabetical order
+        sortedAlphabetically.forEach(tech => {
+          const listItem = document.createElement('li');
+          const link = document.createElement('a');
+          link.innerText = tech.name;
+          link.href = '#' + tech.name.replace(/\s+/g, '');
+          link.onclick = (e) => {
+            e.preventDefault();
+            const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
+            techBox.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+            handleSelection(techBox, document.querySelectorAll('.tech-item'));
+            openModal(tech);
+          };
+          listItem.appendChild(link);
+          techList.appendChild(listItem);
+        });
+      })
+      .catch(error => console.error('Error loading techs:', error));
+
+    document.querySelector('.close').addEventListener('click', closeModal);
+    window.addEventListener('click', (event) => {
+      const modal = document.getElementById('techModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    });
   </script>
 </body>
 </html>
