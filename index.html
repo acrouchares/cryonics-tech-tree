@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revival Research Group - Homepage</title>
 
-  <!-- Inline CSS -->
   <style>
     body {
       margin: 0;
@@ -146,6 +145,52 @@
       text-decoration: underline;
     }
 
+    form {
+      background-color: #00173d;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 0 auto;
+      color: #b3e5fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #e0e0e0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #03a9f4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0288d1;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .header-graphic img {
@@ -195,8 +240,8 @@
   <div id="root"></div>
 
   <!-- React and ReactDOM -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   
   <!-- Babel (for JSX support) -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -204,6 +249,35 @@
   <!-- Inline React Component -->
   <script type="text/babel">
     const RRGWebsite = () => {
+      const [name, setName] = React.useState('');
+      const [email, setEmail] = React.useState('');
+      const [message, setMessage] = React.useState("I'd like to receive the free newsletter.");
+
+      const handleNameChange = (event) => {
+        setName(event.target.value);
+      };
+
+      const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+      };
+
+      const handleMessageChange = (event) => {
+        setMessage(event.target.value);
+      };
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const subject = `Website submission: ${name}`;
+        const body = encodeURIComponent(message);
+
+        // Construct the mailto URL
+        const mailtoLink = `mailto:admin@revivalresearchgroup.org?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        // Open the user's email client with the pre-filled email
+        window.location.href = mailtoLink;
+      };
+
       return (
         <div className="min-h-screen">
           <header>
@@ -223,7 +297,7 @@
           <main id="home">
             <section id="about" className="content-section">
               <h3>Our Mission</h3>
-              <p>We are committed to creating a comprehensive library of data mapping the entire journey to reversing "death". Our focus is on monitoring the evolving list of technologies, companies, and individuals critical to cryostasis revival. </p>
+              <p>We are committed to creating a comprehensive library of data mapping the entire journey to reversing "death". Our focus is on monitoring the evolving list of technologies, companies, and individuals critical to cryostasis revival.</p>
               <a href="mission.html" className="btn">Discover RRG's Mission</a>
             </section>
 
@@ -236,49 +310,62 @@
             <section id="contact" className="content-section">
               <h3>Get Involved</h3>
               <p>Whether you're an expert in AI, cryonics, or simply passionate about pushing the boundaries of human longevity, there's a place for you in our mission. Join our community and help us in our journey towards achieving immortality.</p>
-              <a href="mailto:admin@revivalresearchgroup.org" className="btn">Contact Us</a>
+
+              {/* Newsletter Sign-Up Form */}
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  value={name} 
+                  onChange={handleNameChange} 
+                />
+                
+                <label htmlFor="email">Email:</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                
+                <label htmlFor="subject">Subject:</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  value={`Website submission: ${name}`} 
+                  readOnly 
+                />
+                
+                <label htmlFor="interest">Message:</label>
+                <textarea 
+                  id="interest" 
+                  name="interest" 
+                  rows="4" 
+                  cols="50" 
+                  value={message}
+                  onChange={handleMessageChange}
+                />
+                
+                <input type="submit" value="Submit" />
+              </form>
             </section>
           </main>
-          
+
           <footer>
-            <div className="container mx-auto text-center">
-              <p>For all inquiries or to join our mailing list, email:</p>
-              <p className="text-cyan-300 font-bold">
-                <a href="mailto:admin@revivalresearchgroup.org" style={{ color: '#67e8f9', textDecoration: 'none' }}>
-                  admin@revivalresearchgroup.org
-                </a>
-              </p>
-            </div>
+            <p>&copy; 2024 Revival Research Group. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
           </footer>
         </div>
       );
     };
 
     ReactDOM.render(<RRGWebsite />, document.getElementById('root'));
-
-    // JavaScript to highlight the current section in the menu
-    const menuItems = document.querySelectorAll('.menu-item');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-
-      menuItems.forEach((menuItem) => {
-        const section = document.querySelector(menuItem.getAttribute('href'));
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
-          current = menuItem.getAttribute('href');
-        }
-      });
-
-      menuItems.forEach((menuItem) => {
-        menuItem.classList.remove('active');
-        if (menuItem.getAttribute('href') === current) {
-          menuItem.classList.add('active');
-        }
-      });
-    });
   </script>
 </body>
 </html>
