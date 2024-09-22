@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Tree - Revival Research Group</title>
-
+  
   <style>
+    /* (Your existing CSS styles go here) */
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,7 +59,7 @@
       position: relative;
       padding-bottom: 200px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       grid-gap: 1rem;
     }
 
@@ -67,7 +69,6 @@
       border-radius: 5px;
       padding: 1rem;
       background-color: #00173d;
-      width: 250px;
       text-align: center;
       color: #ffffff;
       margin-bottom: 2rem;
@@ -92,7 +93,7 @@
     }
 
     .gauge {
-      stroke-dasharray: 100;
+      stroke-dasharray: 126; /* 2 * PI * 20 (radius) ≈ 126 */
       stroke-width: 8;
       stroke-linecap: round;
       fill: none;
@@ -166,6 +167,8 @@
       width: 80%;
       max-width: 600px;
       color: #e0e0e0;
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     .modal-content h3 {
@@ -221,11 +224,57 @@
       color: #FF0000; /* Red */
     }
 
+    .category-Monitoring {
+      color: #FFC0CB; /* Pink */
+    }
+
+    .category-Simulation {
+      color: #800080; /* Purple */
+    }
+
+    /* Search Bar Styles */
+    #search-container {
+      margin-bottom: 1rem;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #67e8f9;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background-color: #00173d;
+      color: #e0e0e0;
+    }
+
+    #search-button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      background-color: #67e8f9;
+      color: #00173d;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #search-button:hover {
+      background-color: #5ac8e8;
+    }
   </style>
 </head>
 <body>
 
   <nav>
+    <div id="search-container">
+      <input list="tech-names" id="search-input" placeholder="Search Technology" aria-label="Search Technology" />
+      <datalist id="tech-names">
+        <!-- Options will be populated dynamically -->
+      </datalist>
+      <button id="search-button" aria-label="Search Button">Search</button>
+    </div>
     <ul id="techList">
       <!-- Tech list will be populated dynamically -->
     </ul>
@@ -255,6 +304,7 @@
   <script>
     let techData = [];
 
+    // Function to create a gauge
     function createGauge(percent, textColor) {
       const container = document.createElement('div');
       container.className = 'gauge-container';
@@ -274,7 +324,7 @@
       progress.setAttribute('cx', '25');
       progress.setAttribute('cy', '25');
       progress.setAttribute('r', '20');
-      progress.setAttribute('stroke-dasharray', '126');
+      progress.setAttribute('stroke-dasharray', '126'); // 2 * PI * 20 ≈ 126
       progress.setAttribute('stroke-dashoffset', `${126 - (126 * percent / 100)}`);
       svg.appendChild(progress);
 
@@ -289,6 +339,7 @@
       return container;
     }
 
+    // Function to calculate text color based on AI level
     function calculateTextColor(aiLevel) {
       if (aiLevel === 0) {
         return '#111111';  // Even darker text for level 0 AI
@@ -301,11 +352,13 @@
       }
     }
 
+    // Function to calculate background color based on AI level
     function calculateBackgroundColor(aiLevel) {
       const colors = ['#e0f7fa', '#b3e5fc', '#4fc3f7', '#0288d1', '#01579b', '#013f6e'];
-      return colors[aiLevel];
+      return colors[aiLevel] || '#e0f7fa'; // Default to first color if aiLevel exceeds array
     }
 
+    // Function to open the modal with tech details
     function openModal(tech) {
       const modal = document.getElementById("techModal");
       const title = document.getElementById("techModalTitle");
@@ -322,14 +375,14 @@
       description.innerText = `Description: ${tech.description}`;
       aiLevel.innerText = `AI Level Required: ${tech.aiLevelRequired}`;
 
-      if (tech.prerequisites !== "None") {
+      if (Array.isArray(tech.prerequisites) && tech.prerequisites.length > 0) {
         prerequisites.innerHTML = `Prerequisites: ${createTechLinks(tech.prerequisites)}`;
       } else {
         prerequisites.innerText = "Prerequisites: None";
       }
 
-      if (tech.futureTechDependents.length > 0) {
-        futureTech.innerHTML = `Future Tech Dependents: ${createTechLinks(tech.futureTechDependents.join(', '))}`;
+      if (Array.isArray(tech.futureTechDependents) && tech.futureTechDependents.length > 0) {
+        futureTech.innerHTML = `Future Tech Dependents: ${createTechLinks(tech.futureTechDependents)}`;
       } else {
         futureTech.innerText = "Future Tech Dependents: None";
       }
@@ -340,16 +393,18 @@
       modal.style.display = "flex";
     }
 
+    // Function to close the modal
     function closeModal() {
       const modal = document.getElementById("techModal");
       modal.style.display = "none";
     }
 
-    function createTechLinks(techString) {
-      const techArray = techString.split(', ');
+    // Function to create clickable tech links
+    function createTechLinks(techArray) {
       return techArray.map(techName => `<a href="#" onclick="handleTechLinkClick('${techName}')">${techName}</a>`).join(', ');
     }
 
+    // Function to handle tech link clicks in the modal
     function handleTechLinkClick(techName) {
       closeModal();
       const techBox = document.getElementById(techName.replace(/\s+/g, ''));
@@ -366,87 +421,212 @@
       }
     }
 
+    // Function to handle selection highlighting
     function handleSelection(selectedBox, allBoxes) {
       allBoxes.forEach(box => box.classList.remove('selected'));
       selectedBox.classList.add('selected');
     }
 
+    // Function to generate category class names
     function getCategoryClass(category) {
       return category.replace(/\s+/g, '');
     }
 
-    fetch('techs.json')
-      .then(response => response.json())
-      .then(data => {
-        techData = data;
-        const techList = document.getElementById('techList');
-        const techContainer = document.getElementById('techContainer');
+    // Function to load all JSON files based on techs_index.json
+    async function loadTechnologies() {
+      try {
+        console.log("Fetching techs_index.json...");
+        const indexResponse = await fetch('techs/techs_index.json');
+        if (!indexResponse.ok) {
+          throw new Error(`Failed to load techs_index.json: ${indexResponse.status} ${indexResponse.statusText}`);
+        }
+        const indexData = await indexResponse.json();
+        const techFiles = indexData.techFiles;
 
-        // Sort the data by aiLevelRequired and then by percentCompleted
-        const sortedByEaseAndCompletion = [...data].sort((a, b) => {
-          if (a.aiLevelRequired !== b.aiLevelRequired) {
-            return a.aiLevelRequired - b.aiLevelRequired;
-          }
-          return b.percentCompleted - a.percentCompleted;
+        if (!Array.isArray(techFiles)) {
+          throw new Error(`Invalid format in techs_index.json: 'techFiles' should be an array.`);
+        }
+
+        console.log("Tech files to load:", techFiles);
+        // Fetch all tech category JSON files concurrently
+        const fetchPromises = techFiles.map(file => {
+          return fetch(`techs/${file}`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`Failed to load ${file}: ${response.status} ${response.statusText}`);
+              }
+              return response.json();
+            })
+            .catch(err => {
+              console.error(`Error fetching ${file}:`, err);
+              return []; // Return an empty array to prevent Promise.all from failing
+            });
         });
 
-        // Populate the tech boxes based on sortedByEaseAndCompletion
-        sortedByEaseAndCompletion.forEach(tech => {
-          const techBox = document.createElement('div');
-          const categoryClass = getCategoryClass(tech.category);
-          techBox.id = tech.name.replace(/\s+/g, '');
-          techBox.className = `tech-item category-${categoryClass}`;
-          techBox.style.backgroundColor = calculateBackgroundColor(tech.aiLevelRequired);
+        const techArrays = await Promise.all(fetchPromises);
 
-          techBox.innerHTML = `
-            <h3 style="color:${techBox.style.color};" class="category-${categoryClass}">${tech.name}</h3>
-            <p class="category-${categoryClass}">Category: ${tech.category}</p>
-          `;
+        // Combine all technologies into a single array
+        techData = techArrays.flat();
 
-          const gaugeTextColor = calculateTextColor(tech.aiLevelRequired);
-          const gauge = createGauge(tech.percentCompleted, gaugeTextColor);
-          techBox.appendChild(gauge);
+        console.log("Tech data loaded successfully:", techData);
 
-          techBox.addEventListener('click', () => {
-            handleSelection(techBox, document.querySelectorAll('.tech-item'));
-            openModal(tech);
-          });
+        // Check if techData is populated
+        if (techData.length === 0) {
+          throw new Error("No technology data loaded. Please check your JSON files.");
+        }
 
-          techContainer.appendChild(techBox);
+        // Proceed to render the tech tree
+        renderTechTree();
+      } catch (error) {
+        console.error('Error loading technologies:', error);
+      }
+    }
+
+    // Function to render the tech tree
+    function renderTechTree() {
+      const techList = document.getElementById('techList');
+      const techContainer = document.getElementById('techContainer');
+
+      if (!techContainer) {
+        console.error("Element with ID 'techContainer' not found.");
+        return;
+      }
+
+      // Sort the data by aiLevelRequired and then by percentCompleted
+      const sortedByEaseAndCompletion = [...techData].sort((a, b) => {
+        if (a.aiLevelRequired !== b.aiLevelRequired) {
+          return a.aiLevelRequired - b.aiLevelRequired;
+        }
+        return b.percentCompleted - a.percentCompleted;
+      });
+
+      // Populate the tech boxes based on sortedByEaseAndCompletion
+      sortedByEaseAndCompletion.forEach(tech => {
+        const techBox = document.createElement('div');
+        const categoryClass = getCategoryClass(tech.category);
+        techBox.id = tech.name.replace(/\s+/g, '');
+        techBox.className = `tech-item category-${categoryClass}`;
+        techBox.style.backgroundColor = calculateBackgroundColor(tech.aiLevelRequired);
+
+        techBox.innerHTML = `
+          <h3 class="category-${categoryClass}">${tech.name}</h3>
+          <p class="category-${categoryClass}">Category: ${tech.category}</p>
+        `;
+
+        const gaugeTextColor = calculateTextColor(tech.aiLevelRequired);
+        const gauge = createGauge(tech.percentCompleted, gaugeTextColor);
+        techBox.appendChild(gauge);
+
+        techBox.addEventListener('click', () => {
+          handleSelection(techBox, document.querySelectorAll('.tech-item'));
+          openModal(tech);
         });
 
-        // Now, sort the techs alphabetically for the left panel list
-        const sortedAlphabetically = [...data].sort((a, b) => a.name.localeCompare(b.name));
+        techContainer.appendChild(techBox);
+      });
 
-        // Populate the left panel list based on alphabetical order
-        sortedAlphabetically.forEach(tech => {
-          const listItem = document.createElement('li');
-          const link = document.createElement('a');
-          link.innerText = tech.name;
-          link.href = '#' + tech.name.replace(/\s+/g, '');
-          link.onclick = (e) => {
-            e.preventDefault();
-            const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
+      // Sort the techs alphabetically for the left panel list
+      const sortedAlphabetically = [...techData].sort((a, b) => a.name.localeCompare(b.name));
+
+      // Populate the left panel list based on alphabetical order
+      sortedAlphabetically.forEach(tech => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.innerText = tech.name;
+        link.href = '#' + tech.name.replace(/\s+/g, '');
+        link.onclick = (e) => {
+          e.preventDefault();
+          const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
+          if (techBox) {
             techBox.scrollIntoView({
               behavior: 'smooth',
               block: 'center'
             });
             handleSelection(techBox, document.querySelectorAll('.tech-item'));
             openModal(tech);
-          };
-          listItem.appendChild(link);
-          techList.appendChild(listItem);
-        });
-      })
-      .catch(error => console.error('Error loading techs:', error));
+          }
+        };
+        listItem.appendChild(link);
+        techList.appendChild(listItem);
+      });
 
-    document.querySelector('.close').addEventListener('click', closeModal);
+      // Populate the datalist for autocomplete
+      populateDatalist(techData);
+    }
+
+    // Function to populate the datalist for autocomplete
+    function populateDatalist(nodes) {
+      const datalist = document.getElementById('tech-names');
+      if (!datalist) {
+        console.error("Element with ID 'tech-names' not found.");
+        return;
+      }
+      nodes.forEach(node => {
+        const option = document.createElement('option');
+        option.value = node.name;
+        datalist.appendChild(option);
+      });
+    }
+
+    // Initialize the tech tree by loading technologies
+    loadTechnologies();
+
+    // Event listeners for modal close
+    const closeButton = document.querySelector('.close');
+    if (closeButton) {
+      closeButton.addEventListener('click', closeModal);
+    } else {
+      console.error("Element with class 'close' not found.");
+    }
+
     window.addEventListener('click', (event) => {
       const modal = document.getElementById('techModal');
       if (event.target == modal) {
         closeModal();
       }
     });
+
+    // Event listener for search button
+    const searchButton = document.getElementById('search-button');
+    if (searchButton) {
+      searchButton.addEventListener('click', () => {
+        const searchValue = document.getElementById('search-input').value.trim();
+        if (searchValue === "") return;
+
+        const tech = techData.find(t => t.name.toLowerCase() === searchValue.toLowerCase());
+        if (tech) {
+          const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
+          if (techBox) {
+            techBox.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+            handleSelection(techBox, document.querySelectorAll('.tech-item'));
+            openModal(tech);
+          }
+        } else {
+          alert("Technology not found. Please check your input.");
+        }
+      });
+    } else {
+      console.error("Element with ID 'search-button' not found.");
+    }
+
+    // Allow pressing 'Enter' in the search input to trigger search
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const searchButton = document.getElementById('search-button');
+          if (searchButton) {
+            searchButton.click();
+          }
+        }
+      });
+    } else {
+      console.error("Element with ID 'search-input' not found.");
+    }
   </script>
 </body>
 </html>
