@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Cryopreservation",
+        "category": "Cryonics",
+        "aiLevelRequired": 2,
+        "prerequisites": [],
+        "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance", "Cryoprotectant Toxicity Reduction"],
+        "percentCompleted": 40,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "The process of cooling and storing cells, tissues, or organs at very low temperatures to maintain viability. Essential for the initial preservation of biological structures in cryonics."
+    },
+    {
+        "name": "Cryoprotectant Development",
+        "category": "Cryonics",
+        "aiLevelRequired": 2,
+        "prerequisites": ["Cryopreservation"],
+        "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance", "Cryoprotectant Toxicity Reduction"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Development of substances that prevent ice formation during cryopreservation by inhibiting ice crystal growth, crucial for reducing damage to biological structures."
+    },
+    {
+        "name": "Cryoprotectant Screening",
+        "category": "Cryonics",
+        "aiLevelRequired": 2,
+        "prerequisites": [],
+        "futureTechDependents": ["Cryoprotectant Development"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Screening of various compounds to identify potential cryoprotectants, essential for developing safer and more effective cryopreservation techniques."
+    },
+    {
+        "name": "Perfusion Techniques",
+        "category": "Cryonics",
+        "aiLevelRequired": 2,
+        "prerequisites": ["Cryoprotectant Development"],
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Techniques to ensure uniform distribution of cryoprotectants throughout the body, critical for successful cryopreservation."
+    },
+    {
+        "name": "Advanced Vitrification",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Cryoprotectant Development"],
+        "futureTechDependents": ["DNA Repair Nanobots", "Cryogenic Storage Improvements", "Advanced Rewarming Protocols"],
+        "percentCompleted": 35,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "A method of cryopreservation where biological tissues are cooled at a rate that prevents ice formation, resulting in a glass-like state. This is critical for preserving organs and bodies without damaging cells."
+    },
+    {
+        "name": "Cryogenic Storage Improvements",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Advanced Vitrification"],
+        "futureTechDependents": ["Macrovascular and Microvascular Scans", "Cryogenic Rewarming"],
+        "percentCompleted": 35,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Advancements in maintaining stable cryogenic temperatures for long-term storage, essential for preserving the integrity of cryopreserved tissues and organs."
+    },
+    {
+        "name": "Cryoprotectant Toxicity Reduction",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Cryoprotectant Development"],
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "New methods to reduce toxicity and side effects of cryoprotectants, improving the safety and efficacy of the cryopreservation process."
+    },
+    {
+        "name": "Cryoprotectant Delivery Systems",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Cryoprotectant Development"],
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Advanced systems for delivering cryoprotectants uniformly throughout the body, ensuring effective preservation with minimal damage to tissues."
+    },
+    {
+        "name": "Automated Cryopreservation Systems",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Cryopreservation"],
+        "futureTechDependents": ["Cryogenic Rewarming"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Robotics and automation integrated with AI to ensure precise and consistent application of cryopreservation protocols, enhancing reliability and efficiency."
+    },
+    {
+        "name": "Enhanced Cryoprotectant Combinations",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Cryoprotectant Development"],
+        "futureTechDependents": ["Advanced Vitrification"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Development of new combinations of cryoprotectants to further minimize toxicity and maximize preservation efficacy, enhancing overall cryopreservation outcomes."
+    },
+    {
+        "name": "Post-Cryopreservation Nutrient Delivery Systems",
+        "category": "Cryonics",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Perfusion Techniques"],
+        "futureTechDependents": ["Cell Membrane Repair"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Technologies to provide necessary nutrients and remove waste products during the revival process, maintaining cellular health and viability."
+    },
+    {
+        "name": "Cryonics",
+        "category": "Cryonics",
+        "aiLevelRequired": 0,
+        "prerequisites": ["Advanced Cryopreservation"],
+        "percentCompleted": 20,
+        "energyCost": "Very High",
+        "strategicFocus": "Research & Development",
+        "description": "Preservation of entire organisms at low temperatures with the hope of future revival."
+    },
+    {
+        "name": "Advanced Cryopreservation",
+        "category": "Cryonics",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Cryopreservation", "Cryoprotectant Development"],
+        "futureTechDependents": ["Cryonics"],
+        "percentCompleted": 50,
+        "energyCost": "High",
+        "strategicFocus": "Advanced Research",
+        "description": "Refined cryopreservation techniques for improved viability and reduced damage to complex biological structures."
+    },
+    {
+        "name": "Cryogenic Rewarming",
+        "category": "Cryonics",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Advanced Cryopreservation"],
+        "futureTechDependents": ["Recovery Protocols", "Organ Revival Techniques"],
+        "percentCompleted": 30,
+        "energyCost": "High",
+        "strategicFocus": "Advanced Research",
+        "description": "Techniques to safely and efficiently rewarm cryopreserved organisms, minimizing thermal stress and preventing ice recrystallization."
+    }
+]

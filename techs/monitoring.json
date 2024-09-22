@@ -1,0 +1,222 @@
+[
+    {
+        "name": "Advanced Diagnostic Imaging",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Macrovascular and Microvascular Scans",
+        "futureTechDependents": ["Submicron Tissue Scans"],
+        "percentCompleted": 30,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "High-resolution imaging techniques for detailed diagnostic information, essential for assessing tissue and organ conditions in cryonics and revival procedures."
+    },
+    {
+        "name": "Real-time Health Monitoring",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Continuous monitoring of vital signs and health metrics during revival, ensuring immediate responses to any issues that arise during the process."
+    },
+    {
+        "name": "Wearable Health Sensors",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 30,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Continuous health monitoring through advanced wearable devices, essential for tracking physiological parameters during and after revival."
+    },
+    {
+        "name": "Quantum Dot Diagnostics",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Diagnostic Imaging",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Using quantum dots for highly sensitive and specific diagnostic imaging, enabling better detection of cellular and molecular changes during and after revival."
+    },
+    {
+        "name": "Metabolic Pathway Optimization",
+        "category": "Monitoring",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Regenerative Medicine Algorithms"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Using AI to optimize metabolic pathways for improved cellular function and longevity, essential for maintaining metabolic health during and after revival."
+    },
+    {
+        "name": "Nanopore Sequencing",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Gene Editing for Repair", "Predictive Analytics"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Real-time DNA sequencing for accurate and rapid genetic diagnostics, essential for personalized medicine and tailoring revival protocols to individual genetic profiles."
+    },
+    {
+        "name": "Microfluidic Systems",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Lab-on-a-chip devices for high-throughput biological testing and diagnostics, enabling precise control and manipulation of small fluid volumes in medical diagnostics."
+    },
+    {
+        "name": "Advanced Metabolomics",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "High-throughput analysis of metabolites to understand cellular states and responses, critical for monitoring and optimizing metabolic health during and after revival."
+    },
+    {
+        "name": "Virtual Reality for Therapy",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["AI-driven Rehabilitation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Using VR to aid in mental and physical rehabilitation post-revival, providing immersive environments that enhance recovery and reintegration."
+    },
+    {
+        "name": "Advanced Proteomics",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Bioinformatics Integration"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "High-throughput analysis of proteins to understand cellular functions and states, critical for identifying key biomarkers and guiding treatment decisions."
+    },
+    {
+        "name": "Real-time Biofeedback Systems",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Systems that provide immediate feedback on physiological changes during revival, allowing for real-time adjustments to optimize recovery outcomes."
+    },
+    {
+        "name": "Wearable Biofeedback Devices",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["AI-driven Rehabilitation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Wearable devices that provide biofeedback to aid in physical rehabilitation, helping patients recover more effectively by providing real-time data on their progress."
+    },
+    {
+        "name": "Smart Bandages",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Bandages that monitor wounds and deliver drugs as needed, providing intelligent wound care to promote faster healing and reduce complications."
+    },
+    {
+        "name": "Smart Inhalers",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Wearable Health Sensors",
+        "futureTechDependents": ["AI-based Personal Health Assistants"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Inhalers that monitor usage and provide feedback for respiratory treatments, helping patients manage their conditions more effectively."
+    },
+    {
+        "name": "Wearable Artificial Organs",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Synthetic Blood Substitutes",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Portable devices that temporarily replace the function of failing organs during recovery, providing life-support options while permanent solutions are prepared."
+    },
+    {
+        "name": "Metabolite Profiling",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Advanced Metabolomics",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Comprehensive analysis of metabolites to understand metabolic changes, crucial for monitoring health and guiding personalized treatments."
+    },
+    {
+        "name": "Environmental Control Systems",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Advanced systems to maintain optimal environmental conditions for tissue regeneration, essential for ensuring the success of complex regenerative procedures."
+    },
+    {
+        "name": "Microbiome Restoration",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Techniques to restore and balance the body's microbiome after revival, important for overall health and preventing infections post-revival."
+    },
+    {
+        "name": "Single-Cell Sequencing",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Nanopore Sequencing",
+        "futureTechDependents": ["Personalized Cell Therapy"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Sequencing the genome of individual cells to understand cellular diversity, essential for identifying rare cell types and understanding disease heterogeneity."
+    },
+    {
+        "name": "Remote Patient Monitoring",
+        "category": "Monitoring",
+        "aiLevelRequired": 3,
+        "prerequisites": "Real-time Health Monitoring",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Using technology to monitor patients' health status from a distance, providing continuous oversight and enabling timely interventions when necessary."
+    }
+]

@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Medical Nanorobotics",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["DNA Repair Nanobots", "Cell Membrane Repair"],
+        "futureTechDependents": ["Atomically Precise Manufacturing"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Development of nanorobots for medical applications, including tissue repair and diagnostics, essential for advanced medical procedures in cryonics."
+    },
+    {
+        "name": "Atomically Precise Manufacturing",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Medical Nanorobotics"],
+        "futureTechDependents": ["Mechanosynthesis"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Techniques to manufacture structures and devices at the atomic level, crucial for building the next generation of medical nanorobots and other precision tools."
+    },
+    {
+        "name": "Mechanosynthesis",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Atomically Precise Manufacturing"],
+        "futureTechDependents": ["Nanofactories"],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Building complex molecular structures using mechanical manipulation at the atomic scale, a necessary precursor to the development of nanofactories."
+    },
+    {
+        "name": "Nanofactories",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Mechanosynthesis"],
+        "futureTechDependents": [[]],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Factories capable of producing nanotechnology devices and materials, enabling large-scale production of the tools necessary for advanced medical and cryonics applications."
+    },
+    {
+        "name": "Molecular Chaperones",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Protein Folding Assistance"],
+        "futureTechDependents": [[]],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Proteins that assist in the proper folding of other proteins, crucial for preventing aggregation and ensuring cellular function post-revival."
+    },
+    {
+        "name": "Targeted Nanocarriers for Gene Therapy",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["DNA Repair Nanobots"],
+        "futureTechDependents": [[]],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Advanced delivery systems to transport gene-editing tools (e.g., CRISPR-Cas9) directly to specific cells or tissues, enhancing the precision and efficacy of gene therapies."
+    },
+    {
+        "name": "Nanopore-Based Sensors",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Advanced Diagnostic Imaging"],
+        "futureTechDependents": ["Real-time Health Monitoring"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Sensors utilizing nanopore technology for real-time, high-resolution monitoring of molecular changes within cells and tissues during revival."
+    },
+    {
+        "name": "Nanomedicine Delivery Systems",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Medical Nanorobotics"],
+        "futureTechDependents": ["Gene Editing for Repair"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Precision delivery of nanomedicine to targeted cells and tissues, crucial for effectively treating specific areas without affecting surrounding healthy tissues."
+    },
+    {
+        "name": "Smart Drug Delivery Systems",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Nanoparticle Drug Carriers"],
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Systems that deliver drugs in response to specific physiological conditions, ensuring that treatments are administered at the right time and place for maximum effectiveness."
+    },
+    {
+        "name": "Nanoparticle Drug Carriers",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Nanomedicine Delivery Systems"],
+        "futureTechDependents": ["Precision Pharmacotherapy"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Nanoparticles designed to carry and deliver drugs directly to target cells, enhancing the efficacy of treatments and reducing side effects."
+    },
+    {
+        "name": "Hemostatic Nanoparticles",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Nanoparticle Drug Carriers"],
+        "futureTechDependents": ["Medical Nanorobotics"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Nanoparticles designed to quickly stop bleeding by promoting blood clotting, providing a rapid and effective solution for traumatic injuries."
+    },
+    {
+        "name": "Hydrogel-based Drug Delivery",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Hydrogel Development"],
+        "futureTechDependents": ["Nanomedicine Delivery Systems"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Using hydrogels as carriers for drug delivery, providing a controlled and sustained release of therapeutic agents to targeted areas."
+    },
+    {
+        "name": "Magnetically Guided Nanoparticles",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Nanopore-Based Sensors"],
+        "futureTechDependents": ["Nanomedicine Delivery Systems"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Using magnetic fields to guide nanoparticles to specific locations within the body, enhancing the precision of drug delivery and other medical interventions."
+    },
+    {
+        "name": "Nanoparticle-based Imaging",
+        "category": "Nanotechnology",
+        "aiLevelRequired": 4,
+        "prerequisites": ["Advanced Diagnostic Imaging"],
+        "futureTechDependents": ["Magnetically Guided Nanoparticles"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Using nanoparticles to enhance imaging techniques for better resolution and specificity in medical diagnostics, critical for accurate assessments during revival."
+    }
+]
