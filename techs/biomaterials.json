@@ -1,47 +1,46 @@
 [
     {
-        "name": "Basic Biomaterials",
+        "technology": "Basic Biomaterials",
         "category": "Biomaterials",
-        "aiLevelRequired": 1,
-        "prerequisites": [],
-        "futureTechDependents": ["Hydrogel Development", "Tissue Engineering", "Drug Delivery Systems"],
-        "percentCompleted": 100,
-        "energyCost": "Low",
-        "strategicFocus": "Foundational",
-        "description": "Fundamental technologies and methods for developing materials that interact seamlessly with biological systems, laying the groundwork for advanced biomaterial applications."
+        "classification": "Deployable",
+        "definition": "Fundamental technologies and methods for developing materials that interact seamlessly with biological systems, laying the groundwork for advanced biomaterial applications.",
+        "trl": 9,
+        "tech_readiness": "Actual system proven through successful mission operations (fully mature technology).",
+        "completion_percentage": 100,
+        "energy_cost": "Low",
+        "ai_requirements": "Level 1: Chatbots and Conversational AI"
     },
     {
-        "name": "Hydrogel Development",
+        "technology": "Hydrogel Development",
         "category": "Biomaterials",
-        "aiLevelRequired": 2,
-        "prerequisites": ["Basic Biomaterials"],
-        "futureTechDependents": ["Tissue Engineering", "Drug Delivery Systems"],
-        "percentCompleted": 40,
-        "energyCost": "Medium",
-        "strategicFocus": "Development",
-        "description": "Creates advanced hydrogel formulations for medical and industrial applications."
+        "classification": "Approaching",
+        "definition": "Creates advanced hydrogel formulations for medical and industrial applications.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 50,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
     },
     {
-        "name": "Tissue Engineering",
+        "technology": "Tissue Engineering",
         "category": "Biomaterials",
-        "aiLevelRequired": 3,
-        "prerequisites": ["Hydrogel Development"],
-        "futureTechDependents": ["Organ Printing"],
-        "percentCompleted": 25,
-        "energyCost": "High",
-        "strategicFocus": "Advanced Research",
-        "description": "Develops techniques to grow and organize cells into functional tissues and organs using biomaterials."
+        "classification": "Approaching",
+        "definition": "Develops techniques to grow and organize cells into functional tissues and organs using biomaterials.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 30,
+        "energy_cost": "Medium-High", 
+        "ai_requirements": "Level 3: Agents"
     },
     {
-        "name": "Drug Delivery Systems",
+        "technology": "Drug Delivery Systems",
         "category": "Biomaterials",
-        "aiLevelRequired": 2,
-        "prerequisites": ["Basic Biomaterials"],
-        "futureTechDependents": ["Targeted Therapy Solutions"],
-        "percentCompleted": 35,
-        "energyCost": "Medium",
-        "strategicFocus": "Development",
-        "description": "Designs and develops biomaterials-based systems for targeted and controlled drug delivery."
+        "classification": "Approaching",
+        "definition": "Designs and develops biomaterials-based systems for targeted and controlled drug delivery.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 45,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
     }
-
 ]

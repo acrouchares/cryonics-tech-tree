@@ -1,0 +1,31 @@
+{
+    "name": "Cryopreservation",
+    "category": "Cryonics",
+    "aiLevelRequired": 2,
+    "prerequisites": "None",
+    "futureTechDependents": ["Advanced Vitrification", "Protein Folding Assistance"],
+    "percentCompleted": 40,
+    "energyCost": "Medium",
+    "strategicFocus": "Foundational",
+    "description": "The process of cooling and storing cells, tissues, or organs at very low temperatures to maintain viability. Essential for the initial preservation of biological structures in cryonics.",
+    "researchers": [
+        "Bojic, S.", 
+        "Murray, A.", 
+        "Bentley, B.L.",
+        "Anurag N Jaiswal",
+        "Anjali Vagga"
+    ],
+    "organizations": [
+        "Integrative Genomics of Ageing Group",
+        "Engineering and Physical Sciences Research Council (UK)",
+        "Wellcome Trust",
+        "Biotechnology and Biological Sciences Research Council",
+        "Korea Institute of Oriental Medicine",
+        "Jawaharlal Nehru Medical College, Datta Meghe Institute of Medical Sciences"
+    ],
+    "url": [
+        "https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-021-00976-8",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5395684/",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9756256/"
+    ]
+}

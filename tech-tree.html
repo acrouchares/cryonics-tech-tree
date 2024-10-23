@@ -6,8 +6,7 @@
   <title>Tech Tree - Revival Research Group</title>
   
   <style>
-    /* (Your existing CSS styles go here) */
-
+    /* Your existing CSS styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -108,6 +107,7 @@
 
     .gauge-progress {
       stroke: #67e8f9;
+      transition: stroke-dashoffset 0.3s;
     }
 
     .gauge-text {
@@ -143,6 +143,47 @@
       background-color: #67e8f9;
       border-radius: 6px;
       border: 3px solid #00173d;
+    }
+
+    /* Category-based colors */
+    .category-cryonics {
+      background-color: #002855;
+      color: #67e8f9;
+    }
+
+    .category-cellular-repair {
+      background-color: #014d4e;
+      color: #ffbf00;
+    }
+
+    .category-nanotechnology {
+      background-color: #462255;
+      color: #ff5c8a;
+    }
+
+    .category-simulation {
+      background-color: #00274d;
+      color: #99ff66;
+    }
+
+    .category-advanced-biology {
+      background-color: #003f5e;
+      color: #ff6f61;
+    }
+
+    .category-monitoring {
+      background-color: #1a334f;
+      color: #ffd700;
+    }
+
+    .category-ai-and-data {
+      background-color: #24324d;
+      color: #4db8ff;
+    }
+
+    .default-category {
+      background-color: #00173d;
+      color: #e0e0e0;
     }
 
     /* Modal styles */
@@ -198,71 +239,6 @@
     .modal a:hover {
       text-decoration: underline;
     }
-
-    /* Category-specific text colors */
-    .category-Cryonics {
-      color: #FFCC00; /* Yellow */
-    }
-
-    .category-CellularRepair {
-      color: #00FF00; /* Green */
-    }
-
-    .category-Nanotechnology {
-      color: #FF00FF; /* Magenta */
-    }
-
-    .category-RevivalProcedures {
-      color: #00FFFF; /* Cyan */
-    }
-
-    .category-AIandData {
-      color: #FFA500; /* Orange */
-    }
-
-    .category-AdvancedBiology {
-      color: #FF0000; /* Red */
-    }
-
-    .category-Monitoring {
-      color: #FFC0CB; /* Pink */
-    }
-
-    .category-Simulation {
-      color: #800080; /* Purple */
-    }
-
-    /* Search Bar Styles */
-    #search-container {
-      margin-bottom: 1rem;
-    }
-
-    #search-input {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #67e8f9;
-      border-radius: 4px;
-      box-sizing: border-box;
-      background-color: #00173d;
-      color: #e0e0e0;
-    }
-
-    #search-button {
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      width: 100%;
-      border: none;
-      border-radius: 4px;
-      background-color: #67e8f9;
-      color: #00173d;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    #search-button:hover {
-      background-color: #5ac8e8;
-    }
   </style>
 </head>
 <body>
@@ -304,93 +280,21 @@
   <script>
     let techData = [];
 
-    // Function to create a gauge
-    function createGauge(percent, textColor) {
-      const container = document.createElement('div');
-      container.className = 'gauge-container';
+    // Function to create the circular gauge for progress
+    function createGauge(percent) {
+      const gaugeContainer = document.createElement('div');
+      gaugeContainer.classList.add('gauge-container');
 
-      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-      svg.classList.add('gauge');
-
-      const background = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      background.classList.add('gauge-background');
-      background.setAttribute('cx', '25');
-      background.setAttribute('cy', '25');
-      background.setAttribute('r', '20');
-      svg.appendChild(background);
-
-      const progress = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      progress.classList.add('gauge-progress');
-      progress.setAttribute('cx', '25');
-      progress.setAttribute('cy', '25');
-      progress.setAttribute('r', '20');
-      progress.setAttribute('stroke-dasharray', '126'); // 2 * PI * 20 ≈ 126
-      progress.setAttribute('stroke-dashoffset', `${126 - (126 * percent / 100)}`);
-      svg.appendChild(progress);
-
-      const text = document.createElement('div');
-      text.classList.add('gauge-text');
-      text.innerText = `${percent}%`;
-      text.style.color = textColor;
-
-      container.appendChild(svg);
-      container.appendChild(text);
-
-      return container;
-    }
-
-    // Function to calculate text color based on AI level
-    function calculateTextColor(aiLevel) {
-      if (aiLevel === 0) {
-        return '#111111';  // Even darker text for level 0 AI
-      } else if (aiLevel === 1) {
-        return '#222222';  // Darkened text for level 1 AI
-      } else if (aiLevel > 3) {
-        return '#ffffff';  // Light text for higher AI levels
-      } else {
-        return '#000000';  // Dark text for other AI levels
-      }
-    }
-
-    // Function to calculate background color based on AI level
-    function calculateBackgroundColor(aiLevel) {
-      const colors = ['#e0f7fa', '#b3e5fc', '#4fc3f7', '#0288d1', '#01579b', '#013f6e'];
-      return colors[aiLevel] || '#e0f7fa'; // Default to first color if aiLevel exceeds array
-    }
-
-    // Function to open the modal with tech details
-    function openModal(tech) {
-      const modal = document.getElementById("techModal");
-      const title = document.getElementById("techModalTitle");
-      const category = document.getElementById("techModalCategory");
-      const description = document.getElementById("techModalDescription");
-      const aiLevel = document.getElementById("techModalAiLevel");
-      const prerequisites = document.getElementById("techModalPrerequisites");
-      const futureTech = document.getElementById("techModalFutureTech");
-      const energyCost = document.getElementById("techModalEnergyCost");
-      const strategicFocus = document.getElementById("techModalStrategicFocus");
-
-      title.innerText = tech.name;
-      category.innerText = `Category: ${tech.category}`;
-      description.innerText = `Description: ${tech.description}`;
-      aiLevel.innerText = `AI Level Required: ${tech.aiLevelRequired}`;
-
-      if (Array.isArray(tech.prerequisites) && tech.prerequisites.length > 0) {
-        prerequisites.innerHTML = `Prerequisites: ${createTechLinks(tech.prerequisites)}`;
-      } else {
-        prerequisites.innerText = "Prerequisites: None";
-      }
-
-      if (Array.isArray(tech.futureTechDependents) && tech.futureTechDependents.length > 0) {
-        futureTech.innerHTML = `Future Tech Dependents: ${createTechLinks(tech.futureTechDependents)}`;
-      } else {
-        futureTech.innerText = "Future Tech Dependents: None";
-      }
-
-      energyCost.innerText = `Energy Cost: ${tech.energyCost}`;
-      strategicFocus.innerText = `Strategic Focus: ${tech.strategicFocus}`;
-
-      modal.style.display = "flex";
+      gaugeContainer.innerHTML = `
+        <svg class="gauge">
+          <circle class="gauge-background" cx="25" cy="25" r="20"></circle>
+          <circle class="gauge-progress" cx="25" cy="25" r="20"
+            style="stroke-dashoffset: ${126 - (126 * (percent / 100))};">
+          </circle>
+        </svg>
+        <div class="gauge-text">${percent}%</div>
+      `;
+      return gaugeContainer;
     }
 
     // Function to close the modal
@@ -399,37 +303,42 @@
       modal.style.display = "none";
     }
 
-    // Function to create clickable tech links
-    function createTechLinks(techArray) {
-      return techArray.map(techName => `<a href="#" onclick="handleTechLinkClick('${techName}')">${techName}</a>`).join(', ');
+    // Function to open and populate the modal
+    function openModal(tech) {
+      const modal = document.getElementById("techModal");
+      document.getElementById("techModalTitle").innerText = tech.name;
+      document.getElementById("techModalCategory").innerText = `Category: ${tech.category}`;
+      document.getElementById("techModalDescription").innerText = `Description: ${tech.description || "N/A"}`;
+      document.getElementById("techModalAiLevel").innerText = `AI Level Required: ${tech.aiLevelRequired || "N/A"}`;
+      document.getElementById("techModalPrerequisites").innerText = `Prerequisites: ${tech.prerequisites || "N/A"}`;
+      document.getElementById("techModalFutureTech").innerText = `Future Tech: ${tech.futureTech || "N/A"}`;
+      document.getElementById("techModalEnergyCost").innerText = `Energy Cost: ${tech.energyCost || "N/A"}`;
+      document.getElementById("techModalStrategicFocus").innerText = `Strategic Focus: ${tech.strategicFocus || "N/A"}`;
+
+      modal.style.display = "flex";
     }
 
-    // Function to handle tech link clicks in the modal
-    function handleTechLinkClick(techName) {
-      closeModal();
-      const techBox = document.getElementById(techName.replace(/\s+/g, ''));
-      if (techBox) {
-        techBox.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        });
-        handleSelection(techBox, document.querySelectorAll('.tech-item'));
-        const selectedTech = techData.find(tech => tech.name === techName);
-        if (selectedTech) {
-          setTimeout(() => openModal(selectedTech), 500); 
-        }
-      }
-    }
-
-    // Function to handle selection highlighting
-    function handleSelection(selectedBox, allBoxes) {
-      allBoxes.forEach(box => box.classList.remove('selected'));
-      selectedBox.classList.add('selected');
-    }
-
-    // Function to generate category class names
+    // Function to get CSS class based on category
     function getCategoryClass(category) {
-      return category.replace(/\s+/g, '');
+      // Example category mapping; adjust as needed
+      switch (category.toLowerCase()) {
+        case 'cryonics':
+          return 'category-cryonics';
+        case 'cellular repair':
+          return 'category-cellular-repair';
+        case 'nanotechnology':
+          return 'category-nanotechnology';
+        case 'simulation':
+          return 'category-simulation';
+        case 'advanced biology':
+          return 'category-advanced-biology';
+        case 'monitoring':
+          return 'category-monitoring';
+        case 'ai and data':
+          return 'category-ai-and-data';
+        default:
+          return 'default-category';
+      }
     }
 
     // Function to load all JSON files based on techs_index.json
@@ -492,8 +401,19 @@
         return;
       }
 
+      // Populate and map JSON properties correctly
+      const mappedData = techData.map(tech => {
+        return {
+          name: tech.technology || tech.name,
+          category: tech.category,
+          percentCompleted: tech.completion_percentage || tech.percentCompleted,
+          aiLevelRequired: tech.ai_requirements || tech.aiLevelRequired,
+          description: tech.definition || tech.description
+        };
+      });
+
       // Sort the data by aiLevelRequired and then by percentCompleted
-      const sortedByEaseAndCompletion = [...techData].sort((a, b) => {
+      const sortedByEaseAndCompletion = mappedData.sort((a, b) => {
         if (a.aiLevelRequired !== b.aiLevelRequired) {
           return a.aiLevelRequired - b.aiLevelRequired;
         }
@@ -502,23 +422,27 @@
 
       // Populate the tech boxes based on sortedByEaseAndCompletion
       sortedByEaseAndCompletion.forEach(tech => {
+        if (!tech.name || !tech.category || tech.percentCompleted === undefined) {
+          console.error("Missing properties in tech data:", tech);
+          return; // Skip this tech if any property is missing
+        }
+
         const techBox = document.createElement('div');
         const categoryClass = getCategoryClass(tech.category);
         techBox.id = tech.name.replace(/\s+/g, '');
-        techBox.className = `tech-item category-${categoryClass}`;
-        techBox.style.backgroundColor = calculateBackgroundColor(tech.aiLevelRequired);
+        techBox.className = `tech-item ${categoryClass}`;
 
         techBox.innerHTML = `
-          <h3 class="category-${categoryClass}">${tech.name}</h3>
-          <p class="category-${categoryClass}">Category: ${tech.category}</p>
+          <h3 class="${categoryClass}">${tech.name}</h3>
+          <p class="${categoryClass}">Category: ${tech.category}</p>
         `;
 
-        const gaugeTextColor = calculateTextColor(tech.aiLevelRequired);
-        const gauge = createGauge(tech.percentCompleted, gaugeTextColor);
+        // Append the circular progress indicator
+        const gauge = createGauge(tech.percentCompleted);
         techBox.appendChild(gauge);
 
+        // Add event listener for opening the modal
         techBox.addEventListener('click', () => {
-          handleSelection(techBox, document.querySelectorAll('.tech-item'));
           openModal(tech);
         });
 
@@ -526,7 +450,7 @@
       });
 
       // Sort the techs alphabetically for the left panel list
-      const sortedAlphabetically = [...techData].sort((a, b) => a.name.localeCompare(b.name));
+      const sortedAlphabetically = mappedData.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
 
       // Populate the left panel list based on alphabetical order
       sortedAlphabetically.forEach(tech => {
@@ -536,35 +460,10 @@
         link.href = '#' + tech.name.replace(/\s+/g, '');
         link.onclick = (e) => {
           e.preventDefault();
-          const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
-          if (techBox) {
-            techBox.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-            handleSelection(techBox, document.querySelectorAll('.tech-item'));
-            openModal(tech);
-          }
+          document.getElementById(tech.name.replace(/\s+/g, '')).scrollIntoView({ behavior: 'smooth' });
         };
         listItem.appendChild(link);
         techList.appendChild(listItem);
-      });
-
-      // Populate the datalist for autocomplete
-      populateDatalist(techData);
-    }
-
-    // Function to populate the datalist for autocomplete
-    function populateDatalist(nodes) {
-      const datalist = document.getElementById('tech-names');
-      if (!datalist) {
-        console.error("Element with ID 'tech-names' not found.");
-        return;
-      }
-      nodes.forEach(node => {
-        const option = document.createElement('option');
-        option.value = node.name;
-        datalist.appendChild(option);
       });
     }
 
@@ -573,60 +472,15 @@
 
     // Event listeners for modal close
     const closeButton = document.querySelector('.close');
-    if (closeButton) {
-      closeButton.addEventListener('click', closeModal);
-    } else {
-      console.error("Element with class 'close' not found.");
-    }
+    closeButton.addEventListener('click', closeModal);
 
+    // Close modal when clicking outside the content
     window.addEventListener('click', (event) => {
-      const modal = document.getElementById('techModal');
+      const modal = document.getElementById("techModal");
       if (event.target == modal) {
         closeModal();
       }
     });
-
-    // Event listener for search button
-    const searchButton = document.getElementById('search-button');
-    if (searchButton) {
-      searchButton.addEventListener('click', () => {
-        const searchValue = document.getElementById('search-input').value.trim();
-        if (searchValue === "") return;
-
-        const tech = techData.find(t => t.name.toLowerCase() === searchValue.toLowerCase());
-        if (tech) {
-          const techBox = document.getElementById(tech.name.replace(/\s+/g, ''));
-          if (techBox) {
-            techBox.scrollIntoView({
-              behavior: 'smooth',
-              block: 'center'
-            });
-            handleSelection(techBox, document.querySelectorAll('.tech-item'));
-            openModal(tech);
-          }
-        } else {
-          alert("Technology not found. Please check your input.");
-        }
-      });
-    } else {
-      console.error("Element with ID 'search-button' not found.");
-    }
-
-    // Allow pressing 'Enter' in the search input to trigger search
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-      searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          const searchButton = document.getElementById('search-button');
-          if (searchButton) {
-            searchButton.click();
-          }
-        }
-      });
-    } else {
-      console.error("Element with ID 'search-input' not found.");
-    }
   </script>
 </body>
 </html>
