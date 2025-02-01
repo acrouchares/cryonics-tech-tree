@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Revival Research Group - Homepage</title>
-
   <style>
     body {
       margin: 0;
@@ -103,7 +102,6 @@
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      text-align: center;
       text-decoration: none;
     }
     .btn:hover {
@@ -202,8 +200,9 @@
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
       }
+      /* Change nav ul layout to remain horizontal */
       nav ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
       }
     }
@@ -211,127 +210,69 @@
 </head>
 <body>
   <div id="root"></div>
-
   <!-- React and ReactDOM -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  
   <!-- Babel (for JSX support) -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
   <!-- Inline React Component -->
   <script type="text/babel">
     const RRGWebsite = () => {
       const [name, setName] = React.useState('');
       const [email, setEmail] = React.useState('');
       const [message, setMessage] = React.useState("I'd like to receive the free newsletter.");
-
-      const handleNameChange = (event) => {
-        setName(event.target.value);
-      };
-
-      const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-      };
-
-      const handleMessageChange = (event) => {
-        setMessage(event.target.value);
-      };
-
+      const handleNameChange = (event) => { setName(event.target.value); };
+      const handleEmailChange = (event) => { setEmail(event.target.value); };
+      const handleMessageChange = (event) => { setMessage(event.target.value); };
       const handleSubmit = (event) => {
         event.preventDefault();
-
         const subject = `Website submission: ${name}`;
         const body = encodeURIComponent(message);
-
-        // Construct the mailto URL
         const mailtoLink = `mailto:admin@revivalresearchgroup.org?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-        // Open the user's email client with the pre-filled email
         window.location.href = mailtoLink;
       };
-
       return (
         <div className="min-h-screen">
           <header>
             <nav>
               <ul className="flex space-x-4">
                 <li><a href="#home" className="menu-item">Home</a></li>
-                {/* Updated Tech Tree link */}
                 <li><a href="tech-tree.html" className="menu-item">Tech Tree</a></li>
                 <li><a href="#contact" className="menu-item">Contact</a></li>
                 <li><a href="download.html" className="menu-item">Downloads</a></li>
               </ul>
             </nav>
           </header>
-          
           <div className="header-graphic">
             <img src="images/RRG_Logo.png" alt="RRG Logo" />
           </div>
-          
           <main id="home">
             <section id="about" className="content-section">
               <h3>Our Mission</h3>
               <p>We are committed to creating a comprehensive library of data mapping the entire journey to reversing "death". Our focus is on monitoring the evolving list of technologies, companies, and individuals critical to cryostasis revival.</p>
               <a href="mission.html" className="btn">Discover RRG's Mission</a>
             </section>
-
             <section id="tech-tree" className="content-section">
               <h3>Explore the Tech Tree</h3>
               <p>The Tech Tree helps us organize our 'meta-research' into structured knowledge. Explore the roadmap of technologies we track, categorized by their contributions toward making cryostasis revival a reality.</p>
               <a href="tech-tree.html" className="btn">Explore the Tech Tree</a>
             </section>
-
             <section id="contact" className="content-section">
               <h3>Get Involved</h3>
               <p>Whether you're an expert in AI, cryonics, or simply passionate about pushing the boundaries of human longevity, there's a place for you in our mission. Join our community and help us in our journey towards achieving immortality.</p>
-
-              {/* Newsletter Sign-Up Form */}
               <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  required 
-                  value={name} 
-                  onChange={handleNameChange} 
-                />
-                
+                <input type="text" id="name" name="name" required value={name} onChange={handleNameChange} />
                 <label htmlFor="email">Email:</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required 
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-                
+                <input type="email" id="email" name="email" required value={email} onChange={handleEmailChange} />
                 <label htmlFor="subject">Subject:</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
-                  value={`Website submission: ${name}`} 
-                  readOnly 
-                />
-                
+                <input type="text" id="subject" name="subject" value={`Website submission: ${name}`} readOnly />
                 <label htmlFor="interest">Message:</label>
-                <textarea 
-                  id="interest" 
-                  name="interest" 
-                  rows="4" 
-                  cols="50" 
-                  value={message}
-                  onChange={handleMessageChange}
-                />
-                
+                <textarea id="interest" name="interest" rows="4" cols="50" value={message} onChange={handleMessageChange} />
                 <input type="submit" value="Submit" />
               </form>
             </section>
           </main>
-
           <footer>
             <p>&copy; 2024 Revival Research Group. All rights reserved.</p>
             <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
@@ -339,7 +280,6 @@
         </div>
       );
     };
-
     ReactDOM.render(<RRGWebsite />, document.getElementById('root'));
   </script>
 </body>
