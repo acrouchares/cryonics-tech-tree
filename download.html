@@ -29,7 +29,7 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
-      flex-wrap: wrap;
+      /* Default flex-direction is row */
     }
     nav a {
       color: #fff;
@@ -164,8 +164,9 @@
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
       }
+      /* Keep navigation items in a horizontal row on small screens */
       nav ul {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
       }
     }
