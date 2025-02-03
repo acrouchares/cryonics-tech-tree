@@ -5,8 +5,8 @@
         "classification": "Approaching",
         "definition": "High-fidelity simulations of cellular processes to test and validate repair techniques, crucial for planning effective revival strategies.",
         "trl": 5,
-        "tech_readiness": "Technology validated in a relevant environment.",
-        "completion_percentage": 25,
+        "tech_readiness": "Technology validated in a relevant environment; recent integration with AI modules has improved model accuracy.",
+        "completion_percentage": 30,
         "energy_cost": "Medium",
         "ai_requirements": "Level 3: Agents"
     },
@@ -16,8 +16,8 @@
         "classification": "Bottleneck",
         "definition": "Simulating the entire organ's function to understand and predict outcomes of repair techniques, aiding in the planning of revival procedures.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 15,
+        "tech_readiness": "Technology validated in the lab; preliminary organ-level simulations show enhanced predictive capabilities.",
+        "completion_percentage": 20,
         "energy_cost": "High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -27,8 +27,8 @@
         "classification": "Bottleneck",
         "definition": "Integrated simulation of body systems to test revival procedures and predict their success, crucial for ensuring coordinated body function after revival.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 10,
+        "tech_readiness": "Technology validated in the lab; multi-system models have been integrated with moderate predictive accuracy.",
+        "completion_percentage": 15,
         "energy_cost": "High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -38,8 +38,8 @@
         "classification": "Bottleneck",
         "definition": "Comprehensive simulation of the entire body to validate the complete revival process, ensuring all systems can be successfully restarted and function in unison.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
-        "completion_percentage": 10,
+        "tech_readiness": "Experimental proof of concept demonstrated; preliminary models show improved coordination between systems.",
+        "completion_percentage": 15,
         "energy_cost": "Very High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -49,8 +49,8 @@
         "classification": "Approaching",
         "definition": "Advanced computational models to plan and direct tissue and organ repair, enabling more accurate and effective revival procedures.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 15,
+        "tech_readiness": "Technology validated in the lab; models now incorporate multi-scale repair predictions with improved accuracy.",
+        "completion_percentage": 20,
         "energy_cost": "High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -60,8 +60,8 @@
         "classification": "Approaching",
         "definition": "Creating virtual models of tissues to test engineering techniques before physical implementation, aiding in the development of more effective tissue regeneration strategies.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 20,
+        "tech_readiness": "Technology validated in the lab; virtual models integrated with physical prototyping yield promising results.",
+        "completion_percentage": 25,
         "energy_cost": "Medium",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -71,8 +71,8 @@
         "classification": "Approaching",
         "definition": "Detailed simulation of molecular interactions to understand and optimize biological processes, critical for refining repair techniques at the molecular level.",
         "trl": 5,
-        "tech_readiness": "Technology validated in a relevant environment.",
-        "completion_percentage": 25,
+        "tech_readiness": "Technology validated in a relevant environment; simulations now capture complex molecular interactions with higher fidelity.",
+        "completion_percentage": 30,
         "energy_cost": "High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -82,8 +82,8 @@
         "classification": "Bottleneck",
         "definition": "Creating digital replicas of biological systems for predictive testing and analysis, providing a powerful tool for optimizing revival procedures and therapies.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
-        "completion_percentage": 15,
+        "tech_readiness": "Experimental proof of concept demonstrated; digital twin models are increasingly predictive but require further integration.",
+        "completion_percentage": 20,
         "energy_cost": "High",
         "ai_requirements": "Level 4: Innovators"
     }

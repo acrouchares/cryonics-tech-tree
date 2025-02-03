@@ -5,8 +5,8 @@
         "classification": "Approaching",
         "definition": "Using AI to predict health outcomes and optimize revival procedures, improving the chances of successful recovery by tailoring approaches to individual cases.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 20,
+        "tech_readiness": "Technology validated in the lab; predictive models have been refined with recent datasets.",
+        "completion_percentage": 25,
         "energy_cost": "Medium",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -16,8 +16,8 @@
         "classification": "Bottleneck",
         "definition": "Integrating AI into all aspects of the revival process for decision making and optimization, essential for managing the complex interplay of factors during revival.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
-        "completion_percentage": 15,
+        "tech_readiness": "Experimental proof of concept demonstrated; initial integration pilots underway in controlled settings.",
+        "completion_percentage": 20,
         "energy_cost": "High-Very High",
         "ai_requirements": "Level 5: Organizations"
     },
@@ -27,8 +27,8 @@
         "classification": "Approaching",
         "definition": "Using bioinformatics tools to integrate and analyze biological data for personalized medicine, critical for developing and refining revival techniques.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 20,
+        "tech_readiness": "Technology validated in the lab; expanded data integration protocols now implemented.",
+        "completion_percentage": 25,
         "energy_cost": "Medium",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -38,8 +38,8 @@
         "classification": "Bottleneck",
         "definition": "Systems that combine data from various sources (genomic, proteomic, metabolomic, imaging) to provide holistic insights for personalized revival protocols.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
-        "completion_percentage": 15,
+        "tech_readiness": "Experimental proof of concept demonstrated; prototype platforms show increased interoperability.",
+        "completion_percentage": 20,
         "energy_cost": "High-Very High",
         "ai_requirements": "Level 5: Organizations"
     },
@@ -49,8 +49,8 @@
         "classification": "Bottleneck",
         "definition": "Utilizing AI to design molecules that can facilitate cellular repair, enhance regeneration, or serve as effective cryoprotectants.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
-        "completion_percentage": 15,
+        "tech_readiness": "Experimental proof of concept demonstrated; recent iterations show improved molecule prediction accuracy.",
+        "completion_percentage": 20,
         "energy_cost": "Medium-High",
         "ai_requirements": "Level 5: Organizations"
     },
@@ -60,8 +60,8 @@
         "classification": "Approaching",
         "definition": "Tools that assist medical professionals in making real-time decisions during the revival process based on incoming data streams.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 15,
+        "tech_readiness": "Technology validated in the lab; decision algorithms have been enhanced for faster data processing.",
+        "completion_percentage": 20,
         "energy_cost": "Medium-High",
         "ai_requirements": "Level 4: Innovators"
     },
@@ -82,7 +82,7 @@
         "classification": "Bottleneck",
         "definition": "AI systems that develop personalized rehabilitation plans post-revival, ensuring that patients regain full functionality as quickly and effectively as possible.",
         "trl": 3,
-        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "tech_readiness": "Experimental proof of concept demonstrated; early pilot implementations underway.",
         "completion_percentage": 15,
         "energy_cost": "Medium",
         "ai_requirements": "Level 4: Innovators"
@@ -93,8 +93,8 @@
         "classification": "Approaching",
         "definition": "AI systems that provide personalized health guidance and monitoring, crucial for optimizing health during the recovery phase post-revival.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 20,
+        "tech_readiness": "Technology validated in the lab; user interface and personalization algorithms have been refined.",
+        "completion_percentage": 25,
         "energy_cost": "Medium",
         "ai_requirements": "Level 4: Innovators"
     }

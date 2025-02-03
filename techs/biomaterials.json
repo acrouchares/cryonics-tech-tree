@@ -16,8 +16,8 @@
         "classification": "Approaching",
         "definition": "Creates advanced hydrogel formulations for medical and industrial applications.",
         "trl": 5,
-        "tech_readiness": "Technology validated in a relevant environment.",
-        "completion_percentage": 50,
+        "tech_readiness": "Technology validated in a relevant environment; formulation robustness has improved.",
+        "completion_percentage": 55,
         "energy_cost": "Medium",
         "ai_requirements": "Level 2: Reasoners"
     },
@@ -27,9 +27,9 @@
         "classification": "Approaching",
         "definition": "Develops techniques to grow and organize cells into functional tissues and organs using biomaterials.",
         "trl": 4,
-        "tech_readiness": "Technology validated in the lab.",
-        "completion_percentage": 30,
-        "energy_cost": "Medium-High", 
+        "tech_readiness": "Technology validated in the lab; early in vivo tests show promising integration and functionality.",
+        "completion_percentage": 35,
+        "energy_cost": "Medium-High",
         "ai_requirements": "Level 3: Agents"
     },
     {
@@ -38,8 +38,8 @@
         "classification": "Approaching",
         "definition": "Designs and develops biomaterials-based systems for targeted and controlled drug delivery.",
         "trl": 5,
-        "tech_readiness": "Technology validated in a relevant environment.",
-        "completion_percentage": 45,
+        "tech_readiness": "Technology validated in a relevant environment; advanced targeting algorithms now integrated.",
+        "completion_percentage": 50,
         "energy_cost": "Medium",
         "ai_requirements": "Level 2: Reasoners"
     }
