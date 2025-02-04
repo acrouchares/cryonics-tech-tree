@@ -6,7 +6,7 @@
   <title>Tech Tree - Revival Research Group</title>
   
   <style>
-    /* Your existing CSS styles */
+    /* Existing CSS styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,7 +16,6 @@
       height: 100vh;
       overflow: hidden;
     }
-
     nav {
       width: 300px;
       height: 100vh;
@@ -26,42 +25,42 @@
       box-sizing: border-box;
       border-right: 2px solid #67e8f9;
     }
-
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-
     nav li {
       margin-bottom: 1rem;
     }
-
     nav li a {
       color: #67e8f9;
       text-decoration: none;
       cursor: pointer;
     }
-
     nav li a:hover {
       text-decoration: underline;
     }
-
     main {
       flex-grow: 1;
       overflow-y: auto;
       background-color: #000000;
       padding: 1rem;
     }
-
     .tech-container {
       position: relative;
       padding-bottom: 200px;
+      /* Default grid columns: min width 250px */
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       grid-gap: 1rem;
     }
-
+    /* Mobile: reduce min width by ~10% (to 225px) */
+    @media only screen and (max-width: 600px) {
+      .tech-container {
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+      }
+    }
     .tech-item {
       position: relative;
       border: 2px solid #67e8f9;
@@ -74,23 +73,19 @@
       transition: background-color 0.3s, color 0.3s;
       cursor: pointer;
     }
-
     .tech-item h3 {
       margin: 0;
       font-size: 1.2rem;
     }
-
     .tech-item p {
       margin: 0.5rem 0;
     }
-
     .gauge-container {
       width: 50px;
       height: 50px;
       position: relative;
       margin: 0 auto;
     }
-
     .gauge {
       stroke-dasharray: 126; /* 2 * PI * 20 (radius) ≈ 126 */
       stroke-width: 8;
@@ -100,16 +95,13 @@
       height: 100%;
       transform: rotate(-90deg);
     }
-
     .gauge-background {
       stroke: #10162a;
     }
-
     .gauge-progress {
       stroke: #67e8f9;
       transition: stroke-dashoffset 0.3s;
     }
-
     .gauge-text {
       position: absolute;
       top: 0;
@@ -122,70 +114,56 @@
       font-size: 0.8rem;
       color: #b3e5fc;
     }
-
     .selected {
       background-color: #005f99 !important;
     }
-
     .greyed-out {
       opacity: 0.5;
     }
-
     ::-webkit-scrollbar {
       width: 12px;
     }
-
     ::-webkit-scrollbar-track {
       background: #00173d;
     }
-
     ::-webkit-scrollbar-thumb {
       background-color: #67e8f9;
       border-radius: 6px;
       border: 3px solid #00173d;
     }
-
     /* Category-based colors */
     .category-cryonics {
       background-color: #002855;
       color: #67e8f9;
     }
-
     .category-cellular-repair {
       background-color: #014d4e;
       color: #ffbf00;
     }
-
     .category-nanotechnology {
       background-color: #462255;
       color: #ff5c8a;
     }
-
     .category-simulation {
       background-color: #00274d;
       color: #99ff66;
     }
-
     .category-advanced-biology {
       background-color: #003f5e;
       color: #ff6f61;
     }
-
     .category-monitoring {
       background-color: #1a334f;
       color: #ffd700;
     }
-
     .category-ai-and-data {
       background-color: #24324d;
       color: #4db8ff;
     }
-
     .default-category {
       background-color: #00173d;
       color: #e0e0e0;
     }
-
     /* Modal styles */
     .modal {
       display: none;
@@ -199,7 +177,6 @@
       justify-content: center;
       align-items: center;
     }
-
     .modal-content {
       background-color: #00173d;
       padding: 20px;
@@ -211,11 +188,9 @@
       max-height: 90vh;
       overflow-y: auto;
     }
-
     .modal-content h3 {
       margin-top: 0;
     }
-
     .close {
       color: #ffffff;
       float: right;
@@ -223,45 +198,32 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .close:hover,
     .close:focus {
       color: #f00;
       text-decoration: none;
       cursor: pointer;
     }
-
     .modal a {
       color: #67e8f9;
       cursor: pointer;
     }
-
     .modal a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <nav>
-    <div id="search-container">
-      <input list="tech-names" id="search-input" placeholder="Search Technology" aria-label="Search Technology" />
-      <datalist id="tech-names">
-        <!-- Options will be populated dynamically -->
-      </datalist>
-      <button id="search-button" aria-label="Search Button">Search</button>
-    </div>
     <ul id="techList">
-      <!-- Tech list will be populated dynamically -->
+      <!-- Alphabetical list will be populated dynamically -->
     </ul>
   </nav>
-
   <main>
     <div class="tech-container" id="techContainer">
       <!-- Tech boxes will be dynamically created here -->
     </div>
   </main>
-
   <!-- Modal for displaying tech details -->
   <div id="techModal" class="modal">
     <div class="modal-content">
@@ -271,20 +233,17 @@
       <p id="techModalDescription"></p>
       <p id="techModalAiLevel"></p>
       <p id="techModalPrerequisites"></p>
-      <p id="techModalFutureTech"></p>
       <p id="techModalEnergyCost"></p>
-      <p id="techModalStrategicFocus"></p>
+      <p id="techModalLevel"></p>
     </div>
   </div>
-
   <script>
     let techData = [];
 
-    // Function to create the circular gauge for progress
+    // Function to create the circular gauge for progress.
     function createGauge(percent) {
       const gaugeContainer = document.createElement('div');
       gaugeContainer.classList.add('gauge-container');
-
       gaugeContainer.innerHTML = `
         <svg class="gauge">
           <circle class="gauge-background" cx="25" cy="25" r="20"></circle>
@@ -297,51 +256,38 @@
       return gaugeContainer;
     }
 
-    // Function to close the modal
+    // Function to close the modal.
     function closeModal() {
-      const modal = document.getElementById("techModal");
-      modal.style.display = "none";
+      document.getElementById("techModal").style.display = "none";
     }
 
-    // Function to open and populate the modal
+    // Function to open and populate the modal.
     function openModal(tech) {
-      const modal = document.getElementById("techModal");
       document.getElementById("techModalTitle").innerText = tech.name;
       document.getElementById("techModalCategory").innerText = `Category: ${tech.category}`;
-      document.getElementById("techModalDescription").innerText = `Description: ${tech.description || "N/A"}`;
-      document.getElementById("techModalAiLevel").innerText = `AI Level Required: ${tech.aiLevelRequired || "N/A"}`;
-      document.getElementById("techModalPrerequisites").innerText = `Prerequisites: ${tech.prerequisites || "N/A"}`;
-      document.getElementById("techModalFutureTech").innerText = `Future Tech: ${tech.futureTech || "N/A"}`;
-      document.getElementById("techModalEnergyCost").innerText = `Energy Cost: ${tech.energyCost || "N/A"}`;
-      document.getElementById("techModalStrategicFocus").innerText = `Strategic Focus: ${tech.strategicFocus || "N/A"}`;
-
-      modal.style.display = "flex";
+      document.getElementById("techModalDescription").innerText = `Description: ${tech.definition || "N/A"}`;
+      document.getElementById("techModalAiLevel").innerText = `AI Level Required: ${tech.ai_requirements || "N/A"}`;
+      document.getElementById("techModalPrerequisites").innerText = `Prerequisites: ${tech.prerequisites.length ? tech.prerequisites.join(', ') : "None"}`;
+      document.getElementById("techModalEnergyCost").innerText = `Energy Cost: ${tech.energy_cost || "N/A"}`;
+      document.getElementById("techModalLevel").innerText = `Level: ${tech.level}`;
+      document.getElementById("techModal").style.display = "flex";
     }
 
-    // Function to get CSS class based on category
+    // Function to get CSS class based on category.
     function getCategoryClass(category) {
-      // Example category mapping; adjust as needed
       switch (category.toLowerCase()) {
-        case 'cryonics':
-          return 'category-cryonics';
-        case 'cellular repair':
-          return 'category-cellular-repair';
-        case 'nanotechnology':
-          return 'category-nanotechnology';
-        case 'simulation':
-          return 'category-simulation';
-        case 'advanced biology':
-          return 'category-advanced-biology';
-        case 'monitoring':
-          return 'category-monitoring';
-        case 'ai and data':
-          return 'category-ai-and-data';
-        default:
-          return 'default-category';
+        case 'cryonics': return 'category-cryonics';
+        case 'cellular repair': return 'category-cellular-repair';
+        case 'nanotechnology': return 'category-nanotechnology';
+        case 'simulation': return 'category-simulation';
+        case 'advanced biology': return 'category-advanced-biology';
+        case 'monitoring': return 'category-monitoring';
+        case 'ai and data': return 'category-ai-and-data';
+        default: return 'default-category';
       }
     }
 
-    // Function to load all JSON files based on techs_index.json
+    // Function to load all JSON files based on techs_index.json.
     async function loadTechnologies() {
       try {
         console.log("Fetching techs_index.json...");
@@ -351,13 +297,10 @@
         }
         const indexData = await indexResponse.json();
         const techFiles = indexData.techFiles;
-
         if (!Array.isArray(techFiles)) {
           throw new Error(`Invalid format in techs_index.json: 'techFiles' should be an array.`);
         }
-
         console.log("Tech files to load:", techFiles);
-        // Fetch all tech category JSON files concurrently
         const fetchPromises = techFiles.map(file => {
           return fetch(`techs/${file}`)
             .then(response => {
@@ -368,116 +311,94 @@
             })
             .catch(err => {
               console.error(`Error fetching ${file}:`, err);
-              return []; // Return an empty array to prevent Promise.all from failing
+              return [];
             });
         });
-
         const techArrays = await Promise.all(fetchPromises);
-
-        // Combine all technologies into a single array
         techData = techArrays.flat();
-
         console.log("Tech data loaded successfully:", techData);
-
-        // Check if techData is populated
         if (techData.length === 0) {
           throw new Error("No technology data loaded. Please check your JSON files.");
         }
-
-        // Proceed to render the tech tree
         renderTechTree();
       } catch (error) {
         console.error('Error loading technologies:', error);
       }
     }
 
-    // Function to render the tech tree
+    // Function to render the tech tree.
     function renderTechTree() {
       const techList = document.getElementById('techList');
       const techContainer = document.getElementById('techContainer');
 
-      if (!techContainer) {
-        console.error("Element with ID 'techContainer' not found.");
-        return;
-      }
+      // Clear previous content.
+      techContainer.innerHTML = "";
+      techList.innerHTML = "";
 
-      // Populate and map JSON properties correctly
-      const mappedData = techData.map(tech => {
-        return {
+      // Map JSON properties using our expected fields.
+      const mappedData = techData.map(tech => ({
           name: tech.technology || tech.name,
           category: tech.category,
-          percentCompleted: tech.completion_percentage || tech.percentCompleted,
-          aiLevelRequired: tech.ai_requirements || tech.aiLevelRequired,
-          description: tech.definition || tech.description
-        };
-      });
+          definition: tech.definition,
+          completion_percentage: tech.completion_percentage !== undefined ? tech.completion_percentage : 0,
+          ai_requirements: tech.ai_requirements,
+          energy_cost: tech.energy_cost,
+          level: tech.level !== undefined ? tech.level : (tech.trl ? tech.trl - 1 : 0),
+          prerequisites: tech.prerequisites || []
+      }));
 
-      // Sort the data by aiLevelRequired and then by percentCompleted
-      const sortedByEaseAndCompletion = mappedData.sort((a, b) => {
-        if (a.aiLevelRequired !== b.aiLevelRequired) {
-          return a.aiLevelRequired - b.aiLevelRequired;
-        }
-        return b.percentCompleted - a.percentCompleted;
-      });
-
-      // Populate the tech boxes based on sortedByEaseAndCompletion
-      sortedByEaseAndCompletion.forEach(tech => {
-        if (!tech.name || !tech.category || tech.percentCompleted === undefined) {
+      // Render tech boxes sorted by level (ascending so simpler techs are at the top).
+      mappedData.sort((a, b) => a.level - b.level);
+      mappedData.forEach(tech => {
+        if (!tech.name || !tech.category) {
           console.error("Missing properties in tech data:", tech);
-          return; // Skip this tech if any property is missing
+          return;
         }
-
         const techBox = document.createElement('div');
         const categoryClass = getCategoryClass(tech.category);
         techBox.id = tech.name.replace(/\s+/g, '');
         techBox.className = `tech-item ${categoryClass}`;
-
         techBox.innerHTML = `
           <h3 class="${categoryClass}">${tech.name}</h3>
           <p class="${categoryClass}">Category: ${tech.category}</p>
+          <p>Level: ${tech.level}</p>
+          <p>Energy Cost: ${tech.energy_cost || "N/A"}</p>
         `;
-
-        // Append the circular progress indicator
-        const gauge = createGauge(tech.percentCompleted);
+        const gauge = createGauge(tech.completion_percentage);
         techBox.appendChild(gauge);
-
-        // Add event listener for opening the modal
-        techBox.addEventListener('click', () => {
-          openModal(tech);
-        });
-
+        techBox.addEventListener('click', () => openModal(tech));
         techContainer.appendChild(techBox);
       });
 
-      // Sort the techs alphabetically for the left panel list
-      const sortedAlphabetically = mappedData.sort((a, b) => (a.name || "").localeCompare(b.name || ""));
-
-      // Populate the left panel list based on alphabetical order
-      sortedAlphabetically.forEach(tech => {
+      // Build the alphabetical list without duplicates.
+      const uniqueNames = new Set();
+      mappedData.forEach(tech => uniqueNames.add(tech.name));
+      const sortedNames = Array.from(uniqueNames).sort((a, b) => a.localeCompare(b));
+      sortedNames.forEach(name => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
-        link.innerText = tech.name;
-        link.href = '#' + tech.name.replace(/\s+/g, '');
-        link.onclick = (e) => {
+        link.innerText = name;
+        link.href = '#' + name.replace(/\s+/g, '');
+        link.addEventListener('click', (e) => {
           e.preventDefault();
-          document.getElementById(tech.name.replace(/\s+/g, '')).scrollIntoView({ behavior: 'smooth' });
-        };
+          const element = document.getElementById(name.replace(/\s+/g, ''));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
         listItem.appendChild(link);
         techList.appendChild(listItem);
       });
     }
 
-    // Initialize the tech tree by loading technologies
+    // Initialize the tech tree by loading technologies.
     loadTechnologies();
 
-    // Event listeners for modal close
+    // Event listeners for modal close.
     const closeButton = document.querySelector('.close');
     closeButton.addEventListener('click', closeModal);
-
-    // Close modal when clicking outside the content
     window.addEventListener('click', (event) => {
-      const modal = document.getElementById("techModal");
-      if (event.target == modal) {
+      if (event.target === document.getElementById("techModal")) {
         closeModal();
       }
     });

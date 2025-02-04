@@ -1,0 +1,101 @@
+[
+    {
+        "technology": "Predictive Analytics",
+        "category": "AI and Data",
+        "classification": "Approaching",
+        "definition": "Using AI to predict health outcomes and optimize revival procedures, improving the chances of successful recovery by tailoring approaches to individual cases.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Artificial Intelligence Integration",
+        "category": "AI and Data",
+        "classification": "Bottleneck",
+        "definition": "Integrating AI into all aspects of the revival process for decision making and optimization, essential for managing the complex interplay of factors during revival.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "High-Very High",
+        "ai_requirements": "Level 5: Organizations"
+    },
+    {
+        "technology": "Bioinformatics Integration",
+        "category": "AI and Data",
+        "classification": "Approaching",
+        "definition": "Using bioinformatics tools to integrate and analyze biological data for personalized medicine, critical for developing and refining revival techniques.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Integrative AI Platforms",
+        "category": "AI and Data",
+        "classification": "Bottleneck",
+        "definition": "Systems that combine data from various sources (genomic, proteomic, metabolomic, imaging) to provide holistic insights for personalized revival protocols.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "High-Very High",
+        "ai_requirements": "Level 5: Organizations"
+    },
+    {
+        "technology": "AI-Driven Molecular Design",
+        "category": "AI and Data",
+        "classification": "Bottleneck",
+        "definition": "Utilizing AI to design molecules that can facilitate cellular repair, enhance regeneration, or serve as effective cryoprotectants.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium-High",
+        "ai_requirements": "Level 5: Organizations"
+    },
+    {
+        "technology": "AI-Powered Decision Support Systems",
+        "category": "AI and Data",
+        "classification": "Approaching",
+        "definition": "Tools that assist medical professionals in making real-time decisions during the revival process based on incoming data streams.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium-High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "AI-based Data Management",
+        "category": "AI and Data",
+        "classification": "Deployable",
+        "definition": "Simple AI algorithms for organizing and managing biological data, providing a foundation for more advanced data analysis and integration.",
+        "trl": 6,
+        "tech_readiness": "Technology demonstrated in a relevant environment.",
+        "completion_percentage": 30,
+        "energy_cost": "Low",
+        "ai_requirements": "Level 1: Chatbots and Conversational AI"
+    },
+    {
+        "technology": "AI-driven Rehabilitation",
+        "category": "AI and Data",
+        "classification": "Bottleneck",
+        "definition": "AI systems that develop personalized rehabilitation plans post-revival, ensuring that patients regain full functionality as quickly and effectively as possible.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "AI-based Personal Health Assistants",
+        "category": "AI and Data",
+        "classification": "Approaching",
+        "definition": "AI systems that provide personalized health guidance and monitoring, crucial for optimizing health during the recovery phase post-revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    }
+]

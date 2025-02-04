@@ -1,0 +1,46 @@
+[
+    {
+        "technology": "Basic Biomaterials",
+        "category": "Biomaterials",
+        "classification": "Deployable",
+        "definition": "Fundamental technologies and methods for developing materials that interact seamlessly with biological systems, laying the groundwork for advanced biomaterial applications.",
+        "trl": 9,
+        "tech_readiness": "Actual system proven through successful mission operations (fully mature technology).",
+        "completion_percentage": 100,
+        "energy_cost": "Low",
+        "ai_requirements": "Level 1: Chatbots and Conversational AI"
+    },
+    {
+        "technology": "Hydrogel Development",
+        "category": "Biomaterials",
+        "classification": "Approaching",
+        "definition": "Creates advanced hydrogel formulations for medical and industrial applications.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 50,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    },
+    {
+        "technology": "Tissue Engineering",
+        "category": "Biomaterials",
+        "classification": "Approaching",
+        "definition": "Develops techniques to grow and organize cells into functional tissues and organs using biomaterials.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 30,
+        "energy_cost": "Medium-High", 
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Drug Delivery Systems",
+        "category": "Biomaterials",
+        "classification": "Approaching",
+        "definition": "Designs and develops biomaterials-based systems for targeted and controlled drug delivery.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 45,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    }
+]

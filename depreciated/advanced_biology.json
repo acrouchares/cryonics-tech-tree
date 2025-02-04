@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Synthetic Biology",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Computational Repair Models",
+        "futureTechDependents": ["Complete Organ Regeneration", "Genetic Circuit Libraries"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Design and construction of new biological parts, devices, and systems for repairing and regenerating tissues, essential for advanced regenerative medicine."
+    },
+    {
+        "name": "Stem Cell Therapies",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Regeneration", "Whole Body Revival"],
+        "percentCompleted": 25,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Advanced stem cell treatments for regenerating damaged tissues and organs, playing a vital role in recovery after cryostasis."
+    },
+    {
+        "name": "Bioprinting of Tissues",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Complete Organ Regeneration", "Bioprinting of Vascular Tissues"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Advanced 3D bioprinting methods for creating functional tissue structures, essential for regenerating damaged tissues and organs for revival procedures."
+    },
+    {
+        "name": "Induced Pluripotent Stem Cells (iPSCs)",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Stem Cell Therapies",
+        "futureTechDependents": ["Complete Organ Regeneration"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Reprogramming adult cells to a pluripotent state for generating any cell type needed for tissue regeneration."
+    },
+    {
+        "name": "Advanced Organoid Systems",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Advanced Organ Regeneration"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "More sophisticated mini-organs that can mimic the structure and function of human organs, aiding in transplantation and repair."
+    },
+    {
+        "name": "Molecular Repair Enzymes",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Protein Folding Assistance"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Enzymes designed to specifically target and repair damaged DNA, RNA, and proteins at a molecular level."
+    },
+    {
+        "name": "Complete Organ Regeneration",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": ["Synthetic Biology"],
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 2,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Ability to regenerate entire organs using synthetic biology and advanced tissue engineering techniques, crucial for restoring full body function post-cryopreservation."
+    },
+    {
+        "name": "Advanced Tissue Scaffolding",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Organ Regeneration"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Creating complex tissue scaffolds for organ and tissue regeneration, essential for supporting the growth and organization of cells in regenerative medicine."
+    },
+    {
+        "name": "Synthetic Cell Development",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 5,
+        "prerequisites": "Synthetic Biology",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 10,
+        "energyCost": "Very High",
+        "strategicFocus": "Key Bottleneck",
+        "description": "Creating synthetic cells that mimic natural cell functions, providing a new platform for regenerative medicine and synthetic biology."
+    },
+    {
+        "name": "Organoid Cultures",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioprinting of Tissues",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 25,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "Miniature, simplified versions of organs grown in vitro for testing and research, providing valuable insights into organ development and function."
+    },
+    {
+        "name": "Advanced Proteomics",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 3,
+        "prerequisites": [],
+        "futureTechDependents": ["Bioinformatics Integration"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Foundational",
+        "description": "High-throughput analysis of proteins to understand cellular functions and states, critical for identifying key biomarkers and guiding treatment decisions."
+    },
+    {
+        "name": "Regenerative Medicine Algorithms",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Bioinformatics Integration",
+        "futureTechDependents": ["Whole Body Revival"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "AI-driven algorithms to optimize regenerative medicine protocols, essential for refining the steps necessary for successful revival and tissue regeneration."
+    },
+    {
+        "name": "Organoid-on-a-chip",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Organoid Cultures",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Combining organoid technology with microfluidics to create more accurate models of human physiology, essential for drug testing and disease modeling."
+    },
+    {
+        "name": "Personalized Cell Therapy",
+        "category": "Advanced Biology",
+        "aiLevelRequired": 4,
+        "prerequisites": "Gene Editing for Repair",
+        "futureTechDependents": ["Organ Preservation"],
+        "percentCompleted": 15,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Customizing cell therapy treatments based on individual patient profiles, crucial for optimizing the effectiveness and safety of regenerative medicine."
+    }
+]

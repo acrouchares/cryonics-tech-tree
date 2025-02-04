@@ -1,0 +1,156 @@
+[
+    {
+        "technology": "Cryopreservation",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "The process of cooling and storing cells, tissues, or organs at very low temperatures to maintain viability. Essential for the initial preservation of biological structures in cryonics.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 45,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    },
+    {
+        "technology": "Cryoprotectant Development",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Development of substances that prevent ice formation during cryopreservation by inhibiting ice crystal growth, crucial for reducing damage to biological structures.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 35,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    },
+    {
+        "technology": "Cryoprotectant Screening",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Screening of various compounds to identify potential cryoprotectants, essential for developing safer and more effective cryopreservation techniques.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 35,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    },
+    {
+        "technology": "Perfusion Techniques",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Techniques to ensure uniform distribution of cryoprotectants throughout the body, critical for successful cryopreservation.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 35,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    },
+    {
+        "technology": "Advanced Vitrification",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "A method of cryopreservation where biological tissues are cooled at a rate that prevents ice formation, resulting in a glass-like state. This is critical for preserving organs and bodies without damaging cells.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 40,
+        "energy_cost": "High",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Cryogenic Storage Improvements",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Advancements in maintaining stable cryogenic temperatures for long-term storage, essential for preserving the integrity of cryopreserved tissues and organs.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 40,
+        "energy_cost": "High",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Cryoprotectant Toxicity Reduction",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "New methods to reduce toxicity and side effects of cryoprotectants, improving the safety and efficacy of the cryopreservation process.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 30,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Cryoprotectant Delivery Systems",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Advanced systems for delivering cryoprotectants uniformly throughout the body, ensuring effective preservation with minimal damage to tissues.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 30,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Automated Cryopreservation Systems",
+        "category": "Cryonics",
+        "classification": "Bottleneck",
+        "definition": "Robotics and automation integrated with AI to ensure precise and consistent application of cryopreservation protocols, enhancing reliability and efficiency.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "High",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Enhanced Cryoprotectant Combinations",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Development of new combinations of cryoprotectants to further minimize toxicity and maximize preservation efficacy, enhancing overall cryopreservation outcomes.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 25,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Post-Cryopreservation Nutrient Delivery Systems",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Technologies to provide necessary nutrients and remove waste products during the revival process, maintaining cellular health and viability.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 20,
+        "energy_cost": "High",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Cryonics",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Preservation of entire organisms at low temperatures with the hope of future revival.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 25,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 0: Basic Systems"
+    },
+    {
+        "technology": "Advanced Cryopreservation",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Refined cryopreservation techniques for improved viability and reduced damage to complex biological structures.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 55,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Cryogenic Rewarming",
+        "category": "Cryonics",
+        "classification": "Approaching",
+        "definition": "Techniques to safely and efficiently rewarm cryopreserved organisms, minimizing thermal stress and preventing ice recrystallization.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 35,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    }
+]

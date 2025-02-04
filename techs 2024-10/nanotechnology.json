@@ -1,0 +1,112 @@
+[
+    {
+        "technology": "Medical Nanorobotics",
+        "category": "Nanotechnology",
+        "classification": "Bottleneck",
+        "definition": "Development of nanorobots for medical applications, including tissue repair and diagnostics, essential for advanced medical procedures in cryonics.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 10,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Atomically Precise Manufacturing",
+        "category": "Nanotechnology",
+        "classification": "Bottleneck",
+        "definition": "Techniques to manufacture structures and devices at the atomic level, crucial for building the next generation of medical nanorobots and other precision tools.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 10,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Mechanosynthesis",
+        "category": "Nanotechnology",
+        "classification": "Bottleneck",
+        "definition": "Building complex molecular structures using mechanical manipulation at the atomic scale, a necessary precursor to the development of nanofactories.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 10,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Nanofactories",
+        "category": "Nanotechnology",
+        "classification": "Bottleneck",
+        "definition": "Factories capable of producing nanotechnology devices and materials, enabling large-scale production of the tools necessary for advanced medical and cryonics applications.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 15,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Molecular Chaperones",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Proteins that assist in the proper folding of other proteins, crucial for preventing aggregation and ensuring cellular function post-revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 25,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Targeted Nanocarriers for Gene Therapy",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Advanced delivery systems to transport gene-editing tools (e.g., CRISPR-Cas9) directly to specific cells or tissues, enhancing the precision and efficacy of gene therapies.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Nanopore-Based Sensors",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Sensors utilizing nanopore technology for real-time, high-resolution monitoring of molecular changes within cells and tissues during revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Nanomedicine Delivery Systems",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Precision delivery of nanomedicine to targeted cells and tissues, crucial for effectively treating specific areas without affecting surrounding healthy tissues.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 25,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Smart Drug Delivery Systems",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Systems that deliver drugs in response to specific physiological conditions, ensuring that treatments are administered at the right time and place for maximum effectiveness.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Nanoparticle Drug Carriers",
+        "category": "Nanotechnology",
+        "classification": "Approaching",
+        "definition": "Nanoparticles designed to carry and deliver drugs directly to target cells, enhancing the efficacy of treatments and reducing side effects.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    }
+]

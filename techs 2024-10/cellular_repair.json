@@ -1,0 +1,156 @@
+[
+    {
+        "technology": "Protein Folding Assistance",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Technologies to assist in proper protein folding and prevent misfolding after cryopreservation, crucial for maintaining cellular function post-revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "DNA Repair Nanobots",
+        "category": "Cellular Repair",
+        "classification": "Bottleneck",
+        "definition": "Nanobots designed to repair DNA damage at the cellular level, critical for restoring the integrity of genetic material post-cryostasis.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Cell Membrane Repair",
+        "category": "Cellular Repair",
+        "classification": "Bottleneck",
+        "definition": "Nanotechnology solutions to repair damaged cell membranes, essential for restoring cell viability after cryopreservation.",
+        "trl": 2,
+        "tech_readiness": "Technology concept and/or application formulated.",
+        "completion_percentage": 10,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Gene Editing for Repair",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Precision gene editing techniques to repair genetic damage and defects, crucial for restoring cellular function and preventing genetic disorders after revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium-High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Epigenetic Reprogramming",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Techniques to reset the epigenetic clock and rejuvenate cells, important for reversing aging-related changes and restoring youthful function to cells and tissues.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Cellular Senescence Reversal",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Techniques to reverse cellular aging and restore youthful function, critical for rejuvenating tissues and extending the lifespan of cells post-revival.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Neuroregeneration",
+        "category": "Cellular Repair",
+        "classification": "Bottleneck",
+        "definition": "Methods to regenerate and repair neural tissues and networks, crucial for restoring brain function and overall neurological health after revival.",
+        "trl": 2,
+        "tech_readiness": "Technology concept and/or application formulated.",
+        "completion_percentage": 10,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Whole Body Revival",
+        "category": "Cellular Repair",
+        "classification": "Bottleneck",
+        "definition": "Comprehensive process for reviving an entire body, integrating all previous technologies to restore life and function.",
+        "trl": 1,
+        "tech_readiness": "Basic principles observed and reported.",
+        "completion_percentage": 1,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 5: Organizations"
+    },
+    {
+        "technology": "Genetically Engineered Probiotics",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Probiotics engineered to provide specific health benefits, essential for restoring and maintaining a healthy microbiome post-revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 25,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Optogenetics",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Controlling cells and genes with light to understand and manipulate biological systems, offering precise control over cellular functions and gene expression.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Targeted Protein Degradation",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Techniques to selectively degrade and remove malfunctioning proteins, essential for preventing cellular dysfunction and promoting healthy cell function.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Genetic Circuit Design",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Designing genetic circuits for precise control of gene expression, providing a powerful tool for synthetic biology and regenerative medicine.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Gene Circuit Libraries",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Libraries of genetic circuits for various therapeutic applications, providing a valuable resource for synthetic biology and regenerative medicine.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Cell Differentiation Techniques",
+        "category": "Cellular Repair",
+        "classification": "Approaching",
+        "definition": "Methods to differentiate stem cells into specific cell types, providing a key step in regenerative medicine and tissue engineering.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 30,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 2: Reasoners"
+    }
+]

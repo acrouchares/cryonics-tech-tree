@@ -1,0 +1,90 @@
+[
+    {
+        "technology": "Cellular Simulation",
+        "category": "Simulation",
+        "classification": "Approaching",
+        "definition": "High-fidelity simulations of cellular processes to test and validate repair techniques, crucial for planning effective revival strategies.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 25,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 3: Agents"
+    },
+    {
+        "technology": "Whole Organ Simulation",
+        "category": "Simulation",
+        "classification": "Bottleneck",
+        "definition": "Simulating the entire organ's function to understand and predict outcomes of repair techniques, aiding in the planning of revival procedures.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 15,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Body System Simulation",
+        "category": "Simulation",
+        "classification": "Bottleneck",
+        "definition": "Integrated simulation of body systems to test revival procedures and predict their success, crucial for ensuring coordinated body function after revival.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 10,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Whole Body Simulation",
+        "category": "Simulation",
+        "classification": "Bottleneck",
+        "definition": "Comprehensive simulation of the entire body to validate the complete revival process, ensuring all systems can be successfully restarted and function in unison.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 10,
+        "energy_cost": "Very High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Computational Repair Models",
+        "category": "Simulation",
+        "classification": "Approaching",
+        "definition": "Advanced computational models to plan and direct tissue and organ repair, enabling more accurate and effective revival procedures.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 15,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Virtual Tissue Engineering",
+        "category": "Simulation",
+        "classification": "Approaching",
+        "definition": "Creating virtual models of tissues to test engineering techniques before physical implementation, aiding in the development of more effective tissue regeneration strategies.",
+        "trl": 4,
+        "tech_readiness": "Technology validated in the lab.",
+        "completion_percentage": 20,
+        "energy_cost": "Medium",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Molecular Dynamics Simulation",
+        "category": "Simulation",
+        "classification": "Approaching",
+        "definition": "Detailed simulation of molecular interactions to understand and optimize biological processes, critical for refining repair techniques at the molecular level.",
+        "trl": 5,
+        "tech_readiness": "Technology validated in a relevant environment.",
+        "completion_percentage": 25,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    },
+    {
+        "technology": "Digital Twin Modeling",
+        "category": "Simulation",
+        "classification": "Bottleneck",
+        "definition": "Creating digital replicas of biological systems for predictive testing and analysis, providing a powerful tool for optimizing revival procedures and therapies.",
+        "trl": 3,
+        "tech_readiness": "Experimental proof of concept demonstrated.",
+        "completion_percentage": 15,
+        "energy_cost": "High",
+        "ai_requirements": "Level 4: Innovators"
+    }
+]

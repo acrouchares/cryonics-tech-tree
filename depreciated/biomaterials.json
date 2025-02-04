@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Basic Biomaterials",
+        "category": "Biomaterials",
+        "aiLevelRequired": 1,
+        "prerequisites": [],
+        "futureTechDependents": ["Hydrogel Development", "Tissue Engineering", "Drug Delivery Systems"],
+        "percentCompleted": 100,
+        "energyCost": "Low",
+        "strategicFocus": "Foundational",
+        "description": "Fundamental technologies and methods for developing materials that interact seamlessly with biological systems, laying the groundwork for advanced biomaterial applications."
+    },
+    {
+        "name": "Hydrogel Development",
+        "category": "Biomaterials",
+        "aiLevelRequired": 2,
+        "prerequisites": ["Basic Biomaterials"],
+        "futureTechDependents": ["Tissue Engineering", "Drug Delivery Systems"],
+        "percentCompleted": 40,
+        "energyCost": "Medium",
+        "strategicFocus": "Development",
+        "description": "Creates advanced hydrogel formulations for medical and industrial applications."
+    },
+    {
+        "name": "Tissue Engineering",
+        "category": "Biomaterials",
+        "aiLevelRequired": 3,
+        "prerequisites": ["Hydrogel Development"],
+        "futureTechDependents": ["Organ Printing"],
+        "percentCompleted": 25,
+        "energyCost": "High",
+        "strategicFocus": "Advanced Research",
+        "description": "Develops techniques to grow and organize cells into functional tissues and organs using biomaterials."
+    },
+    {
+        "name": "Drug Delivery Systems",
+        "category": "Biomaterials",
+        "aiLevelRequired": 2,
+        "prerequisites": ["Basic Biomaterials"],
+        "futureTechDependents": ["Targeted Therapy Solutions"],
+        "percentCompleted": 35,
+        "energyCost": "Medium",
+        "strategicFocus": "Development",
+        "description": "Designs and develops biomaterials-based systems for targeted and controlled drug delivery."
+    }
+
+]

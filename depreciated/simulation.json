@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Cellular Simulation",
+        "category": "Simulation",
+        "aiLevelRequired": 3,
+        "prerequisites": "Protein Folding Assistance",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 20,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "High-fidelity simulations of cellular processes to test and validate repair techniques, crucial for planning effective revival strategies."
+    },
+    {
+        "name": "Whole Organ Simulation",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Simulating the entire organ's function to understand and predict outcomes of repair techniques, aiding in the planning of revival procedures."
+    },
+    {
+        "name": "Body System Simulation",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Whole Organ Simulation",
+        "futureTechDependents": ["Whole Body Simulation"],
+        "percentCompleted": 5,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Integrated simulation of body systems to test revival procedures and predict their success, crucial for ensuring coordinated body function after revival."
+    },
+    {
+        "name": "Whole Body Simulation",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Body System Simulation",
+        "futureTechDependents": [[]],
+        "percentCompleted": 5,
+        "energyCost": "Very High",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Comprehensive simulation of the entire body to validate the complete revival process, ensuring all systems can be successfully restarted and function in unison."
+    },
+    {
+        "name": "Computational Repair Models",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Submicron Tissue Scans",
+        "futureTechDependents": [[]],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Foundational",
+        "description": "Advanced computational models to plan and direct tissue and organ repair, enabling more accurate and effective revival procedures."
+    },
+    {
+        "name": "Virtual Tissue Engineering",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Molecular Dynamics Simulation",
+        "futureTechDependents": ["Whole Organ Simulation"],
+        "percentCompleted": 15,
+        "energyCost": "Medium",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Creating virtual models of tissues to test engineering techniques before physical implementation, aiding in the development of more effective tissue regeneration strategies."
+    },
+    {
+        "name": "Molecular Dynamics Simulation",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Cellular Simulation",
+        "futureTechDependents": ["Body System Simulation"],
+        "percentCompleted": 20,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Detailed simulation of molecular interactions to understand and optimize biological processes, critical for refining repair techniques at the molecular level."
+    },
+    {
+        "name": "Digital Twin Modeling",
+        "category": "Simulation",
+        "aiLevelRequired": 4,
+        "prerequisites": "Whole Body Simulation",
+        "futureTechDependents": ["Predictive Analytics"],
+        "percentCompleted": 10,
+        "energyCost": "High",
+        "strategicFocus": "Simulation/Modeling",
+        "description": "Creating digital replicas of biological systems for predictive testing and analysis, providing a powerful tool for optimizing revival procedures and therapies."
+    }
+]
