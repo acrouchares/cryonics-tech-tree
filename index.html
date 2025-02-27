@@ -3,413 +3,370 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tech Tree - Revival Research Group</title>
-  
+  <title>Revival Research Group - Homepage</title>
+
   <style>
-    /* Base CSS styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #00173d;
       color: #e0e0e0;
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
+      line-height: 1.6;
+      scroll-behavior: smooth;
     }
-    nav {
-      width: 300px;
-      height: 100vh;
-      overflow-y: auto;
-      background-color: #000814;
+
+    header {
+      background: linear-gradient(to right, #00bcd4, #2196f3);
       padding: 1rem;
-      box-sizing: border-box;
-      border-right: 2px solid #67e8f9;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
     }
+
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    nav li {
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      background-color: #03a9f4;
+      font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #121212;
+      background-color: #67e8f9;
+    }
+
+    .header-graphic {
+      background-color: #00173d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+    }
+
+    .header-graphic img {
+      width: 50%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #000000;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
       margin-bottom: 1rem;
     }
-    nav li a {
-      color: #67e8f9;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    nav li a:hover {
-      text-decoration: underline;
-    }
-    main {
-      flex-grow: 1;
-      overflow-y: auto;
-      background-color: #000000;
-      padding: 1rem 20px; /* extra horizontal padding on all devices */
-    }
-    .tech-container {
-      position: relative;
-      padding-bottom: 200px;
-      /* Default grid columns: min width 250px */
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      grid-gap: 1rem;
-      padding: 0 20px; /* extra horizontal padding for the container */
-    }
-    /* For mobile devices: further reduce minimum column width to 150px */
-    @media only screen and (max-width: 600px) {
-      .tech-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        padding: 0 10px; /* slightly less horizontal padding on very small screens */
-      }
-      .tech-item h3 {
-        font-size: 1.08rem; /* reduced from 1.2rem */
-      }
-      .tech-item p {
-        font-size: 0.9rem;  /* reduced from around 1rem */
-      }
-    }
-    .tech-item {
-      position: relative;
-      border: 2px solid #67e8f9;
-      border-radius: 5px;
-      padding: 1rem;
-      background-color: #00173d;
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
       text-align: center;
-      color: #ffffff;
-      margin-bottom: 2rem;
-      transition: background-color 0.3s, color 0.3s;
-      cursor: pointer;
     }
-    .tech-item h3 {
-      margin: 0;
-      font-size: 1.2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
-    .tech-item p {
-      margin: 0.5rem 0;
-    }
-    .gauge-container {
-      width: 50px;
-      height: 50px;
-      position: relative;
-      margin: 0 auto;
-    }
-    .gauge {
-      stroke-dasharray: 126; /* 2 * PI * 20 (radius) ≈ 126 */
-      stroke-width: 8;
-      stroke-linecap: round;
-      fill: none;
-      width: 100%;
-      height: 100%;
-      transform: rotate(-90deg);
-    }
-    .gauge-background {
-      stroke: #10162a;
-    }
-    .gauge-progress {
-      stroke: #67e8f9;
-      transition: stroke-dashoffset 0.3s;
-    }
-    .gauge-text {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
+
+    p {
+      font-size: 1rem;
       color: #b3e5fc;
+      margin-bottom: 1.5rem;
     }
-    .selected {
-      background-color: #005f99 !important;
+
+    .content-section {
+      background: linear-gradient(to bottom right, #1e3a8a, #3b82f6);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
     }
-    .greyed-out {
-      opacity: 0.5;
-    }
-    ::-webkit-scrollbar {
-      width: 12px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #00173d;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: #67e8f9;
-      border-radius: 6px;
-      border: 3px solid #00173d;
-    }
-    /* Category-based colors */
-    .category-cryonics {
-      background-color: #002855;
-      color: #67e8f9;
-    }
-    .category-cellular-repair {
-      background-color: #014d4e;
-      color: #ffbf00;
-    }
-    .category-nanotechnology {
-      background-color: #462255;
-      color: #ff5c8a;
-    }
-    .category-simulation {
-      background-color: #00274d;
-      color: #99ff66;
-    }
-    .category-advanced-biology {
-      background-color: #003f5e;
-      color: #ff6f61;
-    }
-    .category-monitoring {
-      background-color: #1a334f;
-      color: #ffd700;
-    }
-    .category-ai-and-data {
-      background-color: #24324d;
-      color: #4db8ff;
-    }
-    .default-category {
-      background-color: #00173d;
-      color: #e0e0e0;
-    }
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background-color: #00173d;
-      padding: 20px;
-      border: 2px solid #67e8f9;
-      border-radius: 5px;
-      width: 80%;
-      max-width: 600px;
-      color: #e0e0e0;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    .modal-content h3 {
-      margin-top: 0;
-    }
-    .close {
-      color: #ffffff;
-      float: right;
-      font-size: 28px;
+
+    .btn {
+      display: inline-block;
+      background-color: #03a9f4;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
       font-weight: bold;
       cursor: pointer;
-    }
-    .close:hover,
-    .close:focus {
-      color: #f00;
+      transition: background-color 0.3s ease;
+      text-align: center;
       text-decoration: none;
-      cursor: pointer;
     }
-    .modal a {
+
+    .btn:hover {
+      background-color: #0288d1;
+    }
+
+    footer {
+      background-color: #00173d;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    footer a {
       color: #67e8f9;
-      cursor: pointer;
+      text-decoration: none;
     }
-    .modal a:hover {
+
+    footer a:hover {
       text-decoration: underline;
+    }
+
+    form {
+      background-color: #00173d;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 0 auto;
+      color: #b3e5fc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #e0e0e0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #03a9f4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0288d1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-graphic img {
+        width: 70%;
+        max-width: 300px;
+      }
+      nav ul {
+        justify-content: center;
+      }
+      nav a {
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-graphic img {
+        width: 80%;
+        max-width: 250px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .content-section {
+        padding: 1rem;
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <ul id="techList">
-      <!-- Alphabetical list will be populated dynamically -->
-    </ul>
-  </nav>
-  <main>
-    <div class="tech-container" id="techContainer">
-      <!-- Tech boxes will be dynamically created here -->
-    </div>
-  </main>
-  <!-- Modal for displaying tech details -->
-  <div id="techModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3 id="techModalTitle"></h3>
-      <p id="techModalCategory"></p>
-      <p id="techModalDescription"></p>
-      <p id="techModalAiLevel"></p>
-      <p id="techModalPrerequisites"></p>
-      <p id="techModalEnergyCost"></p>
-      <p id="techModalLevel"></p>
-    </div>
-  </div>
-  <script>
-    let techData = [];
+  <div id="root"></div>
 
-    // Function to create the circular gauge for progress.
-    function createGauge(percent) {
-      const gaugeContainer = document.createElement('div');
-      gaugeContainer.classList.add('gauge-container');
-      gaugeContainer.innerHTML = `
-        <svg class="gauge">
-          <circle class="gauge-background" cx="25" cy="25" r="20"></circle>
-          <circle class="gauge-progress" cx="25" cy="25" r="20"
-            style="stroke-dashoffset: ${126 - (126 * (percent / 100))};">
-          </circle>
-        </svg>
-        <div class="gauge-text">${percent}%</div>
-      `;
-      return gaugeContainer;
-    }
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Babel (for JSX support) -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
-    // Function to close the modal.
-    function closeModal() {
-      document.getElementById("techModal").style.display = "none";
-    }
+  <!-- Inline React Component -->
+  <script type="text/babel">
+    const RRGWebsite = () => {
+      const [name, setName] = React.useState('');
+      const [email, setEmail] = React.useState('');
+      const [message, setMessage] = React.useState("I'd like to receive the free newsletter.");
 
-    // Function to open and populate the modal.
-    function openModal(tech) {
-      document.getElementById("techModalTitle").innerText = tech.name;
-      document.getElementById("techModalCategory").innerText = `Category: ${tech.category}`;
-      document.getElementById("techModalDescription").innerText = `Description: ${tech.definition || "N/A"}`;
-      document.getElementById("techModalAiLevel").innerText = `AI Level Required: ${tech.ai_requirements || "N/A"}`;
-      document.getElementById("techModalPrerequisites").innerText = `Prerequisites: ${tech.prerequisites.length ? tech.prerequisites.join(', ') : "None"}`;
-      document.getElementById("techModalEnergyCost").innerText = `Energy Cost: ${tech.energy_cost || "N/A"}`;
-      document.getElementById("techModalLevel").innerText = `Level: ${tech.level}`;
-      document.getElementById("techModal").style.display = "flex";
-    }
+      const handleNameChange = (event) => {
+        setName(event.target.value);
+      };
 
-    // Function to get CSS class based on category.
-    function getCategoryClass(category) {
-      switch (category.toLowerCase()) {
-        case 'cryonics': return 'category-cryonics';
-        case 'cellular repair': return 'category-cellular-repair';
-        case 'nanotechnology': return 'category-nanotechnology';
-        case 'simulation': return 'category-simulation';
-        case 'advanced biology': return 'category-advanced-biology';
-        case 'monitoring': return 'category-monitoring';
-        case 'ai and data': return 'category-ai-and-data';
-        default: return 'default-category';
-      }
-    }
+      const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+      };
 
-    // Function to load all JSON files based on techs_index.json.
-    async function loadTechnologies() {
-      try {
-        console.log("Fetching techs_index.json...");
-        const indexResponse = await fetch('techs/techs_index.json');
-        if (!indexResponse.ok) {
-          throw new Error(`Failed to load techs_index.json: ${indexResponse.status} ${indexResponse.statusText}`);
-        }
-        const indexData = await indexResponse.json();
-        const techFiles = indexData.techFiles;
-        if (!Array.isArray(techFiles)) {
-          throw new Error(`Invalid format in techs_index.json: 'techFiles' should be an array.`);
-        }
-        console.log("Tech files to load:", techFiles);
-        const fetchPromises = techFiles.map(file => {
-          return fetch(`techs/${file}`)
-            .then(response => {
-              if (!response.ok) {
-                throw new Error(`Failed to load ${file}: ${response.status} ${response.statusText}`);
-              }
-              return response.json();
-            })
-            .catch(err => {
-              console.error(`Error fetching ${file}:`, err);
-              return [];
-            });
-        });
-        const techArrays = await Promise.all(fetchPromises);
-        techData = techArrays.flat();
-        console.log("Tech data loaded successfully:", techData);
-        if (techData.length === 0) {
-          throw new Error("No technology data loaded. Please check your JSON files.");
-        }
-        renderTechTree();
-      } catch (error) {
-        console.error('Error loading technologies:', error);
-      }
-    }
+      const handleMessageChange = (event) => {
+        setMessage(event.target.value);
+      };
 
-    // Function to render the tech tree.
-    function renderTechTree() {
-      const techList = document.getElementById('techList');
-      const techContainer = document.getElementById('techContainer');
+      const handleSubmit = (event) => {
+        event.preventDefault();
 
-      // Clear previous content.
-      techContainer.innerHTML = "";
-      techList.innerHTML = "";
+        const subject = `Website submission: ${name}`;
+        const body = encodeURIComponent(message);
 
-      // Map JSON properties using our expected fields.
-      const mappedData = techData.map(tech => ({
-          name: tech.technology || tech.name,
-          category: tech.category,
-          definition: tech.definition,
-          completion_percentage: tech.completion_percentage !== undefined ? tech.completion_percentage : 0,
-          ai_requirements: tech.ai_requirements,
-          energy_cost: tech.energy_cost,
-          level: tech.level !== undefined ? tech.level : (tech.trl ? tech.trl - 1 : 0),
-          prerequisites: tech.prerequisites || []
-      }));
+        // Construct the mailto URL
+        const mailtoLink = `mailto:admin@revivalresearchgroup.org?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-      // Render tech boxes sorted by level (ascending so simpler techs are at the top).
-      mappedData.sort((a, b) => a.level - b.level);
-      mappedData.forEach(tech => {
-        if (!tech.name || !tech.category) {
-          console.error("Missing properties in tech data:", tech);
-          return;
-        }
-        const techBox = document.createElement('div');
-        const categoryClass = getCategoryClass(tech.category);
-        techBox.id = tech.name.replace(/\s+/g, '');
-        techBox.className = `tech-item ${categoryClass}`;
-        techBox.innerHTML = `
-          <h3 class="${categoryClass}">${tech.name}</h3>
-          <p class="${categoryClass}">Category: ${tech.category}</p>
-          <p>Level: ${tech.level}</p>
-          <p>Energy Cost: ${tech.energy_cost || "N/A"}</p>
-        `;
-        const gauge = createGauge(tech.completion_percentage);
-        techBox.appendChild(gauge);
-        techBox.addEventListener('click', () => openModal(tech));
-        techContainer.appendChild(techBox);
-      });
+        // Open the user's email client with the pre-filled email
+        window.location.href = mailtoLink;
+      };
 
-      // Build the alphabetical list without duplicates.
-      const uniqueNames = new Set();
-      mappedData.forEach(tech => uniqueNames.add(tech.name));
-      const sortedNames = Array.from(uniqueNames).sort((a, b) => a.localeCompare(b));
-      sortedNames.forEach(name => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.innerText = name;
-        link.href = '#' + name.replace(/\s+/g, '');
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const element = document.getElementById(name.replace(/\s+/g, ''));
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-        listItem.appendChild(link);
-        techList.appendChild(listItem);
-      });
-    }
+      return (
+        <div className="min-h-screen">
+          <header>
+            <nav>
+              <ul className="flex space-x-4">
+                <li><a href="#home" className="menu-item">Home</a></li>
+                <li><a href="#tech-tree" className="menu-item">Tech Tree</a></li>
+                <li><a href="#contact" className="menu-item">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+          
+          <div className="header-graphic">
+            <img src="images/RRG_Logo.png" alt="RRG Logo" />
+          </div>
+          
+          <main id="home">
+            <section id="about" className="content-section">
+              <h3>Our Mission</h3>
+              <p>We are committed to creating a comprehensive library of data mapping the entire journey to reversing "death". Our focus is on monitoring the evolving list of technologies, companies, and individuals critical to cryostasis revival.</p>
+              <a href="mission.html" className="btn">Discover RRG's Mission</a>
+            </section>
 
-    // Initialize the tech tree by loading technologies.
-    loadTechnologies();
+            <section id="tech-tree" className="content-section">
+              <h3>Explore the Tech Tree</h3>
+              <p>The Tech Tree helps us organize our 'meta-research' into structured knowledge. Explore the roadmap of technologies we track, categorized by their contributions toward making cryostasis revival a reality.</p>
+              <a href="tech-tree.html" className="btn">Explore the Tech Tree</a>
+            </section>
 
-    // Event listeners for modal close.
-    const closeButton = document.querySelector('.close');
-    closeButton.addEventListener('click', closeModal);
-    window.addEventListener('click', (event) => {
-      if (event.target === document.getElementById("techModal")) {
-        closeModal();
-      }
-    });
+            <section id="contact" className="content-section">
+              <h3>Get Involved</h3>
+              <p>Whether you're an expert in AI, cryonics, or simply passionate about pushing the boundaries of human longevity, there's a place for you in our mission. Join our community and help us in our journey towards achieving immortality.</p>
+
+              {/* Newsletter Sign-Up Form */}
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required 
+                  value={name} 
+                  onChange={handleNameChange} 
+                />
+                
+                <label htmlFor="email">Email:</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  value={email}
+                  onChange={handleEmailChange}
+                />
+                
+                <label htmlFor="subject">Subject:</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  value={`Website submission: ${name}`} 
+                  readOnly 
+                />
+                
+                <label htmlFor="interest">Message:</label>
+                <textarea 
+                  id="interest" 
+                  name="interest" 
+                  rows="4" 
+                  cols="50" 
+                  value={message}
+                  onChange={handleMessageChange}
+                />
+                
+                <input type="submit" value="Submit" />
+              </form>
+            </section>
+          </main>
+
+          <footer>
+            <p>&copy; 2024 Revival Research Group. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+          </footer>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<RRGWebsite />, document.getElementById('root'));
   </script>
 </body>
 </html>
+//end
